@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+.khung{
+	position:fixed;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:100%;
+	background-color:rgba(0,0,0,0.70);
+	
+	}
+.noidungquancao{
+	width: 500px;
+	height:500px;
+	margin:auto;
+	text-align:center;
+	margin-top:200px;
+	position:relative;	
+}
+.btn-thoat{
+	position:absolute;
+	right:0px;
+	top:0px;
+	}
+.noidungquancao img{
+	width:100%;
+	height:auto;
+	margin:auto;
+	}
+	
+</style>
+</head>
+
+<body>
+<button onClick="DoiMau()" >Đổi Màu</button>
+<div class="khung" id="khung" >
+	<div class="noidungquancao" >
+    	<button class="btn-thoat" onClick="AnKhung()" >Thoát</button>
+    	<img src="images/1.jfif" width="259" height="194" alt=""/>
+    </div>
+
+ </div>
+<button onClick="AnKhung()" >Ẩn khung</button>
+<button onClick="HienKhung()" >Hiện khung</button>
+
+<script type="text/javascript" > 
+ 	 
+	var AnKhung = function(){
+		document.getElementById("khung").style.display = "none";
+		}
+	var HienKhung = function(){
+		document.getElementById("khung").style.display = "block";
+		}
+	
+	
+	var DoiMau = function(){
+	document.getElementById("khung").style.backgroundColor = "red";
+	debugger;
+	document.getElementById("khung").style.color 
+	= "#fff";
+ 	
+		}	
+
+</script>
+
+</body>
+</html>

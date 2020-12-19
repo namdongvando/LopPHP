@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="300" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td>
+      	<label>Số A</label>
+        <input id="soA"  >   
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <label>Số B</label>
+        <input id="soB"  > 
+        </td>
+    </tr>
+    <tr>
+      <td>
+      <button onClick="TinhTong()" >Tinh</button>
+      <button onClick="TinhPTB1()" >Tinh PTB1</button>
+      </td>
+    </tr>
+    <tr>
+      <td><input id="ketQua"  ></td>
+    </tr>
+  </tbody>
+</table>
+
+<script type="text/javascript" >
+	
+	function TinhTong (){
+		var soA = document.getElementById("soA");
+		var soB = document.getElementById("soB");
+		var ketQua = document.getElementById("ketQua");
+		console.log(soA.value);
+		console.log(soB.value);		
+		
+		ketQua.value = 
+		parseFloat(soA.value) 
+		+ parseFloat(soB.value);
+		
+		}
+	var TinhPTB1 = function(){
+		var soA = document.getElementById("soA");
+		var soB = document.getElementById("soB");
+		var ketQua = document.getElementById("ketQua");
+		var a = parseFloat(soA.value);
+		var b = parseFloat(soB.value);
+		
+		if(a==0)
+			if(b==0)
+				ketQua.value = "PT VSN";
+			else
+				ketQua.value = "PT VN";
+		else
+			ketQua.value = -b/a;
+			
+		}
+ 	  
+	
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
