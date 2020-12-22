@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" 
+content="width=device-width, initial-scale=1">
+
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="plugins/owlcarousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="plugins/owlcarousel/dist/assets/owl.theme.default.css">
+<script src="Js/jquery-3.5.1.min.js"></script>
+
+<script src="plugins/owlcarousel/dist/owl.carousel.min.js"></script>
+
+
+<script type="text/javascript" >
+
+	$(document).ready(function(e) {
+		$("#btn-an").click(function(){			
+			$(".khung").hide(100);
+		});
+		$("#btn-hien").click(function(){
+			$(".khung").show(100);
+		});
+		$("#btn-hienan").click(function(){
+			$(".khung").toggle(100);
+		});
+		
+		setInterval(function(){
+			
+			},500);
+		
+		$('.owl-carousel').each(function(index, element) {
+ 			var self = $(this);
+			var dataConfig = self.data();
+			console.log(dataConfig);
+			var id = self.attr("id");
+			id = "#" + id;
+			$(id).owlCarousel(dataConfig);
+			        
+        });
+		
+		/*$('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:3
+				},
+				1000:{
+					items:5
+				}
+			}
+		});*/
+		 
+    });
+
+</script>
+<style  type="text/css">
+	.khung{
+		background-color:red;
+		height:200px;
+		width: 300px;
+		}
+</style>
+
+
+</head>
+
+<body>
+	
+    <button id="btn-an" >Ân</button>
+    <button id="btn-hien" >Hien</button>
+    <button id="btn-hienan" >An/Hien</button>
+	<div class="khung"></div>
+    <div class="khung"></div>
+    <hr>
+    
+    <div data-dots="true" data-loop="true" class="owl-carousel owl-theme"  data-responsive="{0:{items:1},600:{items:3},1000:{items:5}}" id="danhsach2">
+    	<div class="item">
+        <img src="images/1.jfif" width="259" height="194" alt=""/>
+        </div>
+        <div class="item">
+        <img src="images/2.jfif" width="300" height="168" alt=""/>
+        </div>
+        <div class="item">
+        <img src="images/3.jfif" width="275" height="183" alt=""/>
+        </div>
+        <div class="item"><img src="images/4.jfif" width="355" height="142" alt=""/>
+        </div>
+        <div class="item"><img src="images/5.jfif" width="363" height="139" alt=""/>
+        </div>
+        
+        
+    </div>
+    
+    <div class="owl-carousel owl-theme" id="danhsach1">
+    	<div class="item">
+        <img src="images/1.jfif" width="259" height="194" alt=""/>
+        </div>
+        <div class="item">
+        <img src="images/2.jfif" width="300" height="168" alt=""/>
+        </div>
+        <div class="item">
+        <img src="images/3.jfif" width="275" height="183" alt=""/>
+        </div>
+        <div class="item"><img src="images/4.jfif" width="355" height="142" alt=""/>
+        </div>
+        <div class="item"><img src="images/5.jfif" width="363" height="139" alt=""/>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
