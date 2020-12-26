@@ -1,0 +1,31 @@
+/* CSS Document */
+body{
+	background: #aaa;
+	box-sizing: border-box;
+}
+.navbar-default{
+	background-image: none;
+	background-color: green;	
+	border-radius: 0px;
+	border: solid green 1px ;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-default .navbar-nav>.active>a
+, .navbar-default .navbar-nav>.open>a{
+	background-image: none;
+	background-color: rgb(0 150 136 / 70%);
+	color: #fff;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+ .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: rgb(0 150 136 / 70%);
+}
+.navbar-default .navbar-nav>li>a:focus
+, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: rgb(0 150 136 / 70%);
+}

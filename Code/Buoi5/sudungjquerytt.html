@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="Js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" >
+	
+	$(document).ready(function(e) {
+		/* su kiem them thuoc tinh*/
+		$(".themThuocTinh")
+		.click(function(){
+			/*  */
+			$(".danhSachThuocTinh")
+			.append($(".bangmau .thuocTinh").clone());	
+			
+		
+		/* su kiem xoa thuoc tinh */
+			$(".xoaThuocTinh").click(function(){
+				var self = $(this);
+				self.parents(".thuocTinh").remove();
+				console.log(self);
+			});
+		/*het su kien xoa thuoc tinh*/		
+			
+		});
+		/* het su kien them */
+		
+		/* su kiem xoa thuoc tinh */
+			$(".xoaThuocTinh").click(function(){
+				var self = $(this);
+				self.parents(".thuocTinh").remove();
+				console.log(self);
+			});
+		/*het su kien xoa thuoc tinh*/	
+		
+    });
+	
+</script>
+</head>
+
+<body>
+<table width="500" style="margin:auto;" border="1" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td>Stt</td>
+      <td>Tên Thuộc Tính</td>
+      <td>
+      	<button type="button" class="themThuocTinh" >Thêm</button>
+      </td>
+    </tr>
+    <tbody class="danhSachThuocTinh" >
+        <tr  class="thuocTinh" > 
+          <td>0</td>
+          <td>abc</td>
+          <td><button class="xoaThuocTinh" >Xóa</button></td>
+        </tr>
+    </tbody>
+    
+  </tbody>
+</table>
+
+<table style="display:none" class="bangmau" >
+    <tr  class="thuocTinh" > 
+            <td>0</td>
+            <td>
+            	<select>
+                	<option>Có </option>
+                	<option>Không</option>		
+                </select>
+            
+            </td>
+     		<td>
+            <button class="xoaThuocTinh" >Xóa</button>
+            </td>
+     </tr>
+</table>
+
+
+
+</body>
+</html>
