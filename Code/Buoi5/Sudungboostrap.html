@@ -9,9 +9,42 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="bootstrap-3/css/bootstrap.min.css" >
 		<link rel="stylesheet" href="bootstrap-3/css/bootstrap-theme.min.css" >
-
+		<link rel="stylesheet" type="text/css" href="plugins/owlcarousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="plugins/owlcarousel/dist/assets/owl.theme.default.css">
 		<link rel="stylesheet" type="text/css" href="CSS/style1.css">
+		
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="plugins/owlcarousel/dist/owl.carousel.min.js"></script>
 
+		<script type="text/javascript" >
+
+	$(document).ready(function(e) {
+		 
+		
+		$('.owl-carousel').each(function(index, element) {
+ 			var self = $(this);
+			var dataConfig = self.data();
+			dataConfig.responsive ={
+				0:{
+					items:1
+				},
+				600:{
+					items:3
+				},
+				1000:{
+					items:5
+				}
+			} ;
+			console.log(dataConfig);
+			var id = self.attr("id");
+			id = "#" + id;
+			$(id).owlCarousel(dataConfig);
+			        
+        });
+		 
+    });
+
+</script>
 	</head>
 	<body>
 	  <nav class="navbar navbar-default" role="navigation">
@@ -59,10 +92,53 @@
 
 	  <div class="container">
 	  	<div class="row">
-			<div class="col-md-4">
-				Menu
+			<div class="col-md-4 col-sm-5">
+				<!-- Menu -->
+				<ul class="list-group">
+					<li class="list-group-item">
+						<span class="badge">5</span>
+						Item 1
+					</li>
+					<li class="list-group-item">
+						<span class="badge">10</span>
+						Item 2
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+					<li class="list-group-item">
+						<span class="badge">15</span>
+						Item 3
+					</li>
+				</ul>
+
 			</div>	  		
-			<div class="col-md-8">
+			<div class="col-md-8 col-sm-7" >
 				<div id="carousel-id" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carousel-id" data-slide-to="0" class=""></li>
@@ -101,14 +177,142 @@
 							</div>
 						</div>
 					</div>
-					<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					<a class="left tron carousel-mycontrol" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<a class="right carousel-mycontrol" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
 
 			</div>
 
 	  	</div>
 	  </div>
+
+	  <section class="service" >
+	  		<div class="container">
+				<div class="row">
+					<div class="service-item col-md-3">
+						<div class="thumbnail">
+							<img class="imagesIcon" src="./images/icon/icon1.png" alt="abc">
+							<div class="caption">
+								<h3>Bảo Mật Thông Tin</h3>
+							</div>
+						</div>
+					</div>					
+					<div class="service-item col-md-3">
+						<div class="thumbnail">
+							<img class="imagesIcon" src="./images/icon/icon1.png" alt="abc">
+							<div class="caption">
+								<h3>Bảo Mật Thông Tin</h3>
+							</div>
+						</div>
+					</div>					
+					<div class="service-item col-md-3">
+						<div class="thumbnail">
+							<img class="imagesIcon" src="./images/icon/icon1.png" alt="abc">
+							<div class="caption">
+								<h3>Bảo Mật Thông Tin</h3>
+							</div>
+						</div>
+					</div>					
+					<div class="service-item col-md-3">
+						<div class="thumbnail">
+							<img class="imagesIcon" src="./images/icon/icon1.png" alt="abc">
+							<div class="caption">
+								<h3>Bảo Mật Thông Tin</h3>
+							</div>
+						</div>
+					</div>					
+
+				</div>	  			
+	  		</div>
+	  </section>
+
+
+	  <section>
+	  	<div class="container">
+	  		<div class="row">
+	  			<div class="headtop">
+	  			<h2>
+	  				<span>Sản Phẩm HOT</span>
+	  			</h2>
+	  			</div>
+	  			<div class="Content-products">
+					<div id="DanhSachSanPham"  class="DanhSachSanPham owl-carousel owl-theme" data-loop="true" data-margin="10" >
+							<div class="item">
+								<div class="">
+									<div class="thumbnail">
+										<img class="imagesIcon" src="./images/icon/icon1.png" alt="abc">
+										<div class="caption">
+											<h3>Iphone xxx 512G</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. 
+											</p>
+
+											<p>
+												<a href="#" class="btn btn-primary">Thêm Giỏ Hàng</a>
+												<a href="#" class="btn btn-default">Mua Ngay</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="">
+									<div class="thumbnail">
+										<img class="imagesIcon" src="./images/icon/icon1.png" alt="abc">
+										<div class="caption">
+											<h3>Iphone xxx 512G</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. 
+											</p>
+											
+											<p>
+												<a href="#" class="btn btn-primary">Thêm Giỏ Hàng</a>
+												<a href="#" class="btn btn-default">Mua Ngay</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+					</div>
+
+
+	  			</div>
+	  		</div>
+
+	  	</div>
+
+	  </section>
+
+	  <section class="QuanCao2Col" >
+	  	<div class="container">
+	  		<div class="row">
+	  			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	  				<img class="img img-responsive" src="./images/icon/banner1.jpg">
+	  				<div class="NoiDungQuangCao" >
+	  					<p class="text-center" >
+	  						<strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</strong>	
+	  					</p>
+	  					
+	  					<p class="text-center" >
+	  					<a href="# " class="btn btn-primary" >Chi tiết</a>	
+	  					</p>
+	  					
+
+	  				</div>
+	  			</div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	  				<img class="img img-responsive" src="./images/icon/banner1.jpg">
+	  			</div>
+	  		</div>
+
+	  	</div>
+
+	  </section>
 
 
 	  <a class="btn btn-success" data-toggle="modal" href='#modal-id'>Đăng Nhập <i class="glyphicon glyphicon-user" ></i></a>
@@ -131,7 +335,7 @@
 	  </div>
 
 
-		<script src="https://code.jquery.com/jquery.js"></script>
+
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</body>
 </html>

@@ -29,3 +29,84 @@ body{
     color: #fff;
     background-color: rgb(0 150 136 / 70%);
 }
+.carousel-mycontrol:hover{
+	background-color: #fff;
+}
+.carousel-mycontrol{
+	position: absolute;
+	top: 45%;
+	padding: 10px;
+	background-color: rgb(255 255 255 / 64%);
+color: #000;
+}
+.carousel-mycontrol.right{
+right: -50px;
+opacity: 0;
+transition: all 1s;
+
+}
+.carousel:hover .carousel-mycontrol.right{
+right: 30px;
+transition:  all 1s;
+opacity: 1; 
+}
+.carousel:hover .carousel-mycontrol.left{
+left: 30px;
+transition: all 1s;
+opacity: 1;  
+}
+.carousel-mycontrol.left{
+left: -70px;
+opacity: 0; 
+transition: all 1s;
+
+}
+.carousel-mycontrol.tron{
+	border-radius: 30px;
+	width: 50px;
+	height: 50px;
+	line-height: 30px;
+	text-align: center;
+}
+.carousel{
+	overflow: hidden;
+}
+.service-item .imagesIcon{
+	height: 60px;
+	width: 60px;
+	margin: auto;
+	margin-top: 10px;
+}
+.service-item .caption h3{
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	margin: 5px;
+}
+.service{
+	background-color: #fff;
+}
+.service-item .thumbnail{
+	border: 0px;
+	box-shadow: 0px 0px 0px #fff;
+	margin-bottom: 0px;
+}
+.headtop h2{
+	border-bottom: 2px solid green;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase; 
+	margin-bottom: 0px;
+}
+.headtop h2 span{
+	background-color: green;
+	padding: 10px;
+	display: inline-block;
+	color: #fff;
+}
+.Content-products{
+	border: 2px solid green;
+	border-top:0px; 
+	padding: 10px;
+}
