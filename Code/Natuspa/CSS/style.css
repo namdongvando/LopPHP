@@ -1,0 +1,53 @@
+
+/* CSS Document */
+body {
+	padding: 0px;
+	margin: 0px;
+}
+* {
+	box-sizing: border-box;
+}
+ 
+ #carousel-id{
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 0px;
+ 	width: 100%;
+z-index: 0;
+ }
+
+ .mymenu{
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 0px;
+ 	width: 100%;
+ 	z-index: 1;
+ }
+ .navbar-default {
+    background-color: #f8f8f800;
+    border-color: #e7e7e700;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    line-height: 60px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #e7e7e700;
+    color: #fff;
+    text-decoration: underline;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.logo{
+	height: 60px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #f96982;
+}

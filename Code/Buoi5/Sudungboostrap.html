@@ -12,15 +12,18 @@
 		<link rel="stylesheet" type="text/css" href="plugins/owlcarousel/dist/assets/owl.carousel.min.css">
 <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/dist/assets/owl.theme.default.css">
 		<link rel="stylesheet" type="text/css" href="CSS/style1.css">
+		<link rel="stylesheet" type="text/css" href="./plugins/wowjs/css/libs/animate.css">
 		
 		<script src="https://code.jquery.com/jquery.js"></script>
+
+		<script src="plugins/wowjs/dist/wow.min.js"></script>
 		<script src="plugins/owlcarousel/dist/owl.carousel.min.js"></script>
 
 		<script type="text/javascript" >
 
 	$(document).ready(function(e) {
-		 
-		
+		 var wow = new WOW();
+		wow.init();
 		$('.owl-carousel').each(function(index, element) {
  			var self = $(this);
 			var dataConfig = self.data();
@@ -291,7 +294,7 @@
 	  <section class="QuanCao2Col" >
 	  	<div class="container">
 	  		<div class="row">
-	  			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	  			<div class="wow bounceInUp  QuanCao2Colitem col-xs-6 col-sm-6 col-md-6 col-lg-6">
 	  				<img class="img img-responsive" src="./images/icon/banner1.jpg">
 	  				<div class="NoiDungQuangCao" >
 	  					<p class="text-center" >
