@@ -3,6 +3,10 @@
 body {
 	padding: 0px;
 	margin: 0px;
+	background-image: url('./../Home_one.jpg');
+	min-height: 3000px;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 }
 * {
 	box-sizing: border-box;
@@ -10,7 +14,7 @@ body {
  
  #carousel-id{
  	position: absolute;
- 	top: 0px;
+ 	top: 0;
  	left: 0px;
  	width: 100%;
 z-index: 0;
@@ -18,7 +22,7 @@ z-index: 0;
 
  .mymenu{
  	position: absolute;
- 	top: 0px;
+ 	top: 0;
  	left: 0px;
  	width: 100%;
  	z-index: 1;
@@ -30,17 +34,18 @@ z-index: 0;
 .navbar-default .navbar-nav>li>a {
     color: #fff;
     line-height: 60px;
+    padding: 20px;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #555;
     background-color: #e7e7e700;
     color: #fff;
-    text-decoration: underline;
+     
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #fff;
     background-color: transparent;
-    text-decoration: underline;
+    
 }
 .logo{
 	height: 60px;
@@ -50,4 +55,98 @@ z-index: 0;
     height: 12px;
     margin: 0;
     background-color: #f96982;
+}
+.navbar-default .navbar-nav>li>a{
+	position: relative;
+}
+.navbar-default .navbar-nav>li>a::before{
+	content: "";
+	width: 0%;
+	border-top: 1px solid #fff;
+	position: absolute;
+	height: 1px;
+	top: 60%;
+	transition: all 1s; 
+}
+
+.navbar-default .navbar-nav>li:hover >a::before{
+	content: "";
+	width: 100%;
+	border-top: 1px solid #fff;
+	position: absolute;
+	height: 1px;
+	top: 60%;
+	transition: all 1s; 
+}
+.renew-menu.navbar-default .navbar-brand{
+	background-color: aqua;
+
+}
+.renew-menu.navbar-default .navbar-brand::after{
+	position: absolute;
+    top: -136px;
+    z-index: -1;
+    content: "";
+    width: 200px;
+    left: -13px;
+    height: 136px;
+    transform: rotate(-45deg);
+    background-color: aqua;
+}
+.carousel-mycontrol.left{
+	left: 15%;
+}
+.carousel-mycontrol.right {
+	right: 15%;
+}
+.carousel-mycontrol{
+	padding: 15px;
+    background-color: #ffffff96;
+    position: absolute;
+    top: 50%; 
+    line-height: 14px;
+    color: #000;
+    border-radius: 30px;
+}
+.carousel-mycontrol:hover{
+	padding: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%; 
+    line-height: 14px;
+    color: #000;
+    border-radius: 30px;
+}
+.header{
+	min-height: 550px;
+}
+.title-Best-Services{
+	margin-top: 60px;
+	font-size: 24px;
+}
+.body-Best-Services .thumbnail img
+{
+	height: 80px;
+}
+
+.body-Best-Services .thumbnail .caption p{
+	height: 80px;
+	text-align: center;
+}
+.body-Best-Services .thumbnail .caption h3{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.img-story{
+	width: 100%;
+}
+.body-Best-Services .thumbnail{
+	background-color: rgb(255 255 255 / 0%);
+	border: 0px;
+}
+@media (min-width: 1500px){
+	.header{
+	min-height: 835px;
+}
 }
