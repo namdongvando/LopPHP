@@ -343,6 +343,15 @@ $_Content = "./Pages/{$pages}.php";
                 <li><a href="?pages=themloai"><i class="fa fa-circle-o"></i> Thêm Loại</a></li>
               </ul>
             </li>
+            <li class=" treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Quản Lý NCC</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="?pages=ncc"><i class="fa fa-circle-o"></i> Danh Sách NCC</a></li>
+                <li><a href="?pages=themncc"><i class="fa fa-circle-o"></i> Thêm NCC</a></li>
+              </ul>
+            </li>
         </ul>
         </section>
         <!-- /.sidebar -->

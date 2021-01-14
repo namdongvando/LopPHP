@@ -1,6 +1,6 @@
 <?php 
 
-    $sql = "SELECT * FROM `nn_loai`";
+    $sql = "SELECT * FROM `nn_nhacungcap`";
     $res = $db->query($sql); 
     //var_dump($res);
 
@@ -10,17 +10,18 @@
 
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách Loại</h3>
+            <h3 class="panel-title">Danh Sách NCC</h3>
       </div>
       <div class="panel-body">
         <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th></th>
-                <th>Mã Loại</th>
-                <th>Tên Loại</th>
-                <th>Hình Ảnh</th>
-                <th>Ghi Chú</th>
+                <th>Mã Ncc</th>
+                <th>Tên Công Ty</th>
+                <th>Điện Thoại</th>
+                <th>Email</th>
+                <th>Người Liên Hệ</th>
             </tr>
         </thead>
         <tbody>
@@ -30,16 +31,17 @@
             <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<?php echo $row["MaLoai"] ?>">Sửa</a>
+                 href="?pages=suancc&id=<?php echo $row["MaNCC"] ?>">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<?php echo $row["MaLoai"] ?>">Xóa</a>
+                 href="?pages=xoancc&id=<?php echo $row["MaNCC"] ?>">Xóa</a>
                 </th>
-                <th><?php echo $row["MaLoai"]; ?></th>
-                <th><?php echo $row["TenLoai"]; ?></th>
-                <th><?php echo $row["HinhAnh"]; ?></th>
-                <th><?php echo $row["GhiChu"]; ?></th>
+                <th><?php echo $row["MaNCC"]; ?></th>
+                <th><?php echo $row["TenCTY"]; ?></th>
+                <th><?php echo $row["DienThoai"]; ?></th>
+                <th><?php echo $row["Email"]; ?></th>
+                <th><?php echo $row["NguoiLienHe"]; ?></th>
             </tr>                                   
                 <?php              
             }
