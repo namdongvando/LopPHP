@@ -1,22 +1,4 @@
-<?php 
 
- $start = microtime(true); 
- 
-include("ConnectDB.php");
-include("Functions.php");
-include("ReadCache.php");
-//echo md5($_SERVER["REQUEST_URI"]) ;
-
-
-$pages =  "index";
-if(isset($_GET["pages"])){
-    $pages = $_GET["pages"];
-} 
-$_Content = "./Pages/".$pages.".php";
-$_Content = "./Pages/{$pages}.php";
-
-
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -266,14 +248,14 @@ $_Content = "./Pages/{$pages}.php";
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="./public/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">__fullname__</span>
+                  <span class="hidden-xs">Teo nguyen</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src="./public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     <p>
-                    __fullname__ - Web Developer
+                    Teo nguyen - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -318,7 +300,7 @@ $_Content = "./Pages/{$pages}.php";
               <img src="./public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>__fullname__</p>
+              <p>Teo nguyen</p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -340,16 +322,6 @@ $_Content = "./Pages/{$pages}.php";
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
                
-            </li>
-            <li class=" treeview">
-              <a href="#">
-                <i class="fa fa-users"></i> <span>Quản Lý Tài Khoản</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="?pages=danhsachtaikhoan">
-                <i class="fa fa-users"></i> Danh Sách Tài Khoản</a></li>
-                <li><a href="?pages=themtaikhoan"><i class="fa fa-circle-o"></i> Thêm Tài Khoản</a></li>
-              </ul>
             </li>
             <li class=" treeview">
               <a href="#">
@@ -375,9 +347,132 @@ $_Content = "./Pages/{$pages}.php";
       </aside>
  
       <div class="content-wrapper">
-        <?php
-        include $_Content;
-        ?>
+        
+
+
+<div class="panel panel-primary">
+      <div class="panel-heading">
+            <h3 class="panel-title">Danh Sách Loại</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Mã Loại</th>
+                <th>Tên Loại</th>
+                <th>Hình Ảnh</th>
+                <th>Ghi Chú</th>
+            </tr>
+        </thead>
+        <tbody>
+                        <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=11">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=11">Xóa</a>
+                </th>
+                <th>11</th>
+                <th>sdasd</th>
+                <th>./public/loai/11-Home_one_02 - Copy.gif</th>
+                <th>sdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=12">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=12">Xóa</a>
+                </th>
+                <th>12</th>
+                <th>asdas</th>
+                <th>asdas</th>
+                <th>dasd</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=13">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=13">Xóa</a>
+                </th>
+                <th>13</th>
+                <th>as dasd</th>
+                <th></th>
+                <th>asd asasdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=14">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=14">Xóa</a>
+                </th>
+                <th>14</th>
+                <th>asd asd</th>
+                <th></th>
+                <th>as asdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=15">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=15">Xóa</a>
+                </th>
+                <th>15</th>
+                <th>asd asdas</th>
+                <th></th>
+                <th>d asdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=16">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=16">Xóa</a>
+                </th>
+                <th>16</th>
+                <th>ASas</th>
+                <th>./public/loai/1611668380Home_one_05 - Copy.gif</th>
+                <th>sASa</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=17">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=17">Xóa</a>
+                </th>
+                <th>17</th>
+                <th>qweqw</th>
+                <th>./public/loai/1611668392Home_one_02 - Copy.gif</th>
+                <th>eqweqw</th>
+            </tr>                                   
+                        
+
+                    
+        </tbody>
+    </table>
+             
+      </div>
+</div>
+
 
       </div>
       
@@ -595,8 +690,3 @@ $_Content = "./Pages/{$pages}.php";
   </body>
 </html>
 
-<?php 
-include("SaveCache.php");
-$end = microtime(true); 
- echo $end - $start;
-?>
