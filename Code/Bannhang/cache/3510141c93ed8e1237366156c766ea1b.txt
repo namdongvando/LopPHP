@@ -325,6 +325,16 @@
             </li>
             <li class=" treeview">
               <a href="#">
+                <i class="fa fa-users"></i> <span>Quản Lý Tài Khoản</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="?pages=danhsachtaikhoan">
+                <i class="fa fa-users"></i> Danh Sách Tài Khoản</a></li>
+                <li><a href="?pages=themtaikhoan"><i class="fa fa-circle-o"></i> Thêm Tài Khoản</a></li>
+              </ul>
+            </li>
+            <li class=" treeview">
+              <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Quản Lý Loại</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">

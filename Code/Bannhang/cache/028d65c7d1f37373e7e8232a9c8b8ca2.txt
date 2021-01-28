@@ -357,72 +357,242 @@
       </aside>
  
       <div class="content-wrapper">
-        
+        11
 
 
-<div class="breadcrumb" >
-    <a href="?pages=danhsachtaikhoan"
-     class="btn btn-primary">
-     Danh Sách Tài Khoản
-    </a>
+<div class="panel panel-primary">
+      <div class="panel-heading">
+            <h3 class="panel-title">Danh Sách Loại</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>#</th>
+                <th>Ho & Tên</th>
+                <th>Tài Khoản</th>
+                <th>SĐT</th>
+                <th>Email</th>
+                <th>Tình Trạng</th>
+            </tr>
+        </thead>
+        <tbody>
+                        <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>1</th>
+                <th>adas</th>
+                <th>abc</th>
+                <th>asd</th>
+                <th>sdasd</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>2</th>
+                <th>adas</th>
+                <th>abczsda</th>
+                <th>asd</th>
+                <th>sdasdasda</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>3</th>
+                <th>adas</th>
+                <th>ASa</th>
+                <th>asd</th>
+                <th>asdas</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>4</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>5</th>
+                <th>asdasdas</th>
+                <th>asdasd</th>
+                <th>2342342342</th>
+                <th>asdasdas@gmail.com</th>
+                <th>0</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>6</th>
+                <th>zsdas das das</th>
+                <th>2342342342</th>
+                <th>asdasd as</th>
+                <th>asasdasdasdasdas@gmail.com</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>7</th>
+                <th>zsdas das das</th>
+                <th>2342342342342</th>
+                <th>23423423</th>
+                <th>asdasda@gmail.com</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>8</th>
+                <th>asd asdas</th>
+                <th>dasd23423423</th>
+                <th>asdas</th>
+                <th>asdaasdasdassdas@gmail.com</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>9</th>
+                <th>adas</th>
+                <th>abczsdaasdas</th>
+                <th>asd</th>
+                <th>sdasdasdasd asd asa</th>
+                <th>1</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>47</b><br />
+">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=<br />
+<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>51</b><br />
+">Xóa</a>
+                </th>
+                <th>10</th>
+                <th>zsdas das das</th>
+                <th>2342342342asdas</th>
+                <th>asdasd as</th>
+                <th>asasdasdasdasdas@gmaiasdasl.com</th>
+                <th>1</th>
+            </tr>                                   
+                        
+
+                    
+        </tbody>
+    </table>
+        <ul class="pagination">
+            <li class="active" ><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>             
+      </div>
 </div>
-<div class="col-md-12">
-    <form action="" method="POST">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                    <h3 class="panel-title">Thêm Tài Khoản</h3>
-            </div>
-            <div class="panel-body">
-                <div class="form-group">
-                    <label for="">Họ Tên</label>
-                    <input 
-                    value="" 
-                    required="true" name="tk[Name]" type="text" class="form-control">
-                </div>                   
-                <div class="form-group">
-                    <label for="">Tài Khoản</label>
-                    <input value=""  required="true" name="tk[Username]" type="text" class="form-control">
-                </div>                   
-                <div class="form-group">
-                    <label for="">Sô Điện Thoại</label>
-                    <input required="true" name="tk[Phone]" type="text" class="form-control">
-                </div>                   
-                <div class="form-group">
-                    <label for="">Email</label>
-                    <input required="true" name="tk[Email]" type="email" class="form-control">
-                </div>                   
-                <div class="form-group">
-                    <label for="">Ngày Sinh</label>
-                    <input name="tk[BOD]" type="date" class="form-control">
-                </div>                    
-                <div class="form-group">
-                    <label for="">Giới Tính</label>
-                    <select name="tk[Sex]"
-                       class="form-control">
-    <option value="1" > Nam</option>
-    <option value="0" > Nữ</option>
-</select>
-                </div>                    
-                <div class="form-group">
-                    <label for="">Địa Chỉ</label>
-                    <input name="tk[Address]" type="text" class="form-control">
-                </div>                    
-                <div class="form-group">
-                    <label for="">Trạng Thái</label>
-                    <select name="tk[Active]" 
-                     class="form-control">
-                     <option value="1" >Hoạt Động</option>
-                     <option value="0" >Khóa</option>
-</select>
-                </div>                    
-                
-                <button type="reset" class="btn btn-default">Làm Lại</button>
-                
-                <button type="submit" name="Save" class="btn btn-success" >Thêm </button>
-            </div>
-        </div>
-    </form>
-</div>
+
 
       </div>
       

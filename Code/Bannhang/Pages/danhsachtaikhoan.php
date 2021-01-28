@@ -5,15 +5,16 @@
     // từ khoán tìm kiếm
     $keyword = "";
     // trang hien tai
-    $pagesNumber = 1;
+    $pagesNumber = 
+    isset($_REQUEST["pagesNumber"])?$_REQUEST["pagesNumber"]:1;
     // só dòng / trang
-    $rowNumber = 10;
+    $rowNumber = 
+    isset($_REQUEST["rowNumber"])?$_REQUEST["rowNumber"]:10;
     // tổng số dòng
     $total = 0;
-    GetAdminsPT($keyword,$pagesNumber,$rowNumber,$total);
-
+    $taiKhoans = GetAdminsPT($keyword,$pagesNumber,$rowNumber,$total);
     //var_dump($res);
-
+    echo $total;
 ?>
 
 
@@ -27,15 +28,18 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Mã Loại</th>
-                <th>Tên Loại</th>
-                <th>Hình Ảnh</th>
-                <th>Ghi Chú</th>
+                <th>#</th>
+                <th>Ho & Tên</th>
+                <th>Tài Khoản</th>
+                <th>SĐT</th>
+                <th>Email</th>
+                <th>Tình Trạng</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            while ($row = $res->fetch_array()) {
+            $index = 1;
+            while ($row = $taiKhoans->fetch_array()) {
                 ?>
             <tr>
                 <th>
@@ -46,10 +50,12 @@
                  class="btn btn-danger"
                  href="?pages=xoaloai&id=<?php echo $row["MaLoai"] ?>">Xóa</a>
                 </th>
-                <th><?php echo $row["MaLoai"]; ?></th>
-                <th><?php echo $row["TenLoai"]; ?></th>
-                <th><?php echo $row["HinhAnh"]; ?></th>
-                <th><?php echo $row["GhiChu"]; ?></th>
+                <th><?php echo $index++; ?></th>
+                <th><?php echo $row["Name"]; ?></th>
+                <th><?php echo $row["Username"]; ?></th>
+                <th><?php echo $row["Phone"]; ?></th>
+                <th><?php echo $row["Email"]; ?></th>
+                <th><?php echo $row["Active"]; ?></th>
             </tr>                                   
                 <?php              
             }
@@ -58,7 +64,13 @@
                     
         </tbody>
     </table>
-             
+        <ul class="pagination">
+            <li class="active" ><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>             
       </div>
 </div>
 
