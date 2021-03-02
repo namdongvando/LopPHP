@@ -52,7 +52,7 @@ function UpdateLoai($loai){
     // trả về các dòng hiển thị
     return Db()->query($sql);
     
- }
+ } 
  // lấy danh sách tài khoản và phân trang
  function GetLoaiPT ($keyword,$pagesNumber,$rowNumber,&$total){
     // tính vị trí bắt đầu
@@ -179,4 +179,22 @@ $forString = "";
     // đổi __for__ thành danh sach lap
     $String = str_replace("__for__",$forString,$String);
     return $String;
+}
+// lấy hàng hóa phan trang
+function GetHHPT($keyword,$pagesIndex,$pagesNumber,&$total){
+    // tính vị trí cần lấy theo trang
+    $pagesIndex = $pagesIndex-1;
+    $pagesIndex= max($pagesIndex,0);
+    // câu lenh truy vấn lấy tất cả các dòng
+    $sql =  "SELECT * FROM `nn_hanghoa` WHERE 
+    `Code` LIKE '%{$keyword}%' 
+    or `TenHH` LIKE '%{$keyword}%'";
+     // thực hiện câu lệnh truy vấn
+     $res = Db()->query($sql);
+     // lấy tổng số dòng
+     $total = $res->num_rows;
+     // lấy các dòng o trang hiện tại
+    $sql .= " limit {$pagesIndex},{$pagesNumber}";
+    // thưc hiện truy vấn
+    return Db()->query($sql);
 }

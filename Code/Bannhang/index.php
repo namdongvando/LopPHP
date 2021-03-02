@@ -56,7 +56,7 @@ $_Content = "./Pages/{$pages}.php";
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition sidebar-collapse sidebar-mini skin-blue">
     <div class="wrapper">
 
       <header class="main-header">
@@ -336,7 +336,7 @@ $_Content = "./Pages/{$pages}.php";
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="/banhang/">
+              <a href="/">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
                
@@ -367,6 +367,15 @@ $_Content = "./Pages/{$pages}.php";
               <ul class="treeview-menu">
                 <li class="active"><a href="?pages=ncc"><i class="fa fa-circle-o"></i> Danh Sách NCC</a></li>
                 <li><a href="?pages=themncc"><i class="fa fa-circle-o"></i> Thêm NCC</a></li>
+              </ul>
+            </li>
+            <li class=" treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Quản Lý Hang Hóa</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="?pages=hhdanhsach"><i class="fa fa-circle-o"></i> Danh Sách Hàng Hóa</a></li>
+                <li><a href="?pages=hhthem"><i class="fa fa-circle-o"></i> Thêm Hàng Hóa</a></li>
               </ul>
             </li>
         </ul>

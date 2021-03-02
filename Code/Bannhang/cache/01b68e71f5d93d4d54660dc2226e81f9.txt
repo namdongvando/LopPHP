@@ -318,7 +318,7 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="/banhang/">
+              <a href="/">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
                
@@ -357,105 +357,47 @@
       </aside>
  
       <div class="content-wrapper">
-        11
+        
 
 
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách Loại</h3>
+            <h3 class="panel-title">Danh Sách NCC</h3>
       </div>
       <div class="panel-body">
         <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
+                <th>Mã Ncc</th>
+                <th>Tên Công Ty</th>
+                <th>Điện Thoại</th>
                 <th>Email</th>
-                <th>Tình Trạng</th>
+                <th>Người Liên Hệ</th>
             </tr>
         </thead>
         <tbody>
                         <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
+                 href="?pages=suancc&id=3">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
+                 href="?pages=xoancc&id=3">Xóa</a>
                 </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>abc</th>
-                <th>asd</th>
-                <th>sdasd</th>
-                <th>1</th>
+                <th>3</th>
+                <th>asdas</th>
+                <th>23423423</th>
+                <th>asdasdas@gmail.com</th>
+                <th>asdas</th>
             </tr>                                   
                         
 
                     
         </tbody>
     </table>
-
-            
-<ul class="pagination">
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-        First
-        </a>
-    </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-            Prev
-        </a>
-    </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-            next
-        </a>
-    </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-            Last
-        </a>
-    </li>
-
-</ul>
-
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
+             
       </div>
 </div>
 

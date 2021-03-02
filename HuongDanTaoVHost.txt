@@ -1,0 +1,14 @@
+Bước 1: vao C:\xampp\apache\conf\extra\httpd-vhosts.conf
+them code
+<VirtualHost *:80> 
+	ServerName php246.dev1 	
+    DocumentRoot "C:\xampp\htdocs\php246"
+	<Directory "C:\xampp\htdocs\php246"> 
+		Options +Indexes +Includes +FollowSymLinks +MultiViews 
+		AllowOverride All 
+		Require local 
+	</Directory>
+</VirtualHost>
+Buoc 2: C:\Windows\System32\drivers\etc\hosts
+them dong
+::1			banghang.dev1

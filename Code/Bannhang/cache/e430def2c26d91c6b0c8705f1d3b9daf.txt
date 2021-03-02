@@ -38,7 +38,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition sidebar-collapse sidebar-mini skin-blue">
     <div class="wrapper">
 
       <header class="main-header">
@@ -318,7 +318,7 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="/banhang/">
+              <a href="/">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
                
@@ -351,115 +351,144 @@
                 <li><a href="?pages=themncc"><i class="fa fa-circle-o"></i> Thêm NCC</a></li>
               </ul>
             </li>
+            <li class=" treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Quản Lý Hang Hóa</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="?pages=hhdanhsach"><i class="fa fa-circle-o"></i> Danh Sách Hàng Hóa</a></li>
+                <li><a href="?pages=hhthem"><i class="fa fa-circle-o"></i> Thêm Hàng Hóa</a></li>
+              </ul>
+            </li>
         </ul>
         </section>
         <!-- /.sidebar -->
       </aside>
  
       <div class="content-wrapper">
-        11
-
-
-<div class="panel panel-primary">
-      <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách Loại</h3>
-      </div>
-      <div class="panel-body">
-        <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
-                <th>Email</th>
-                <th>Tình Trạng</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>
-                <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
-                 <a 
-                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
-                 class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
-                </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>abc</th>
-                <th>asd</th>
-                <th>sdasd</th>
-                <th>1</th>
-            </tr>                                   
-                        
-
+        
+<ol class="breadcrumb">
+    <li>
+        <a href="/">Dashboard</a>
+    </li>
+    <li>
+        <a href="?pages=hhdanhsach">Danh Sách Hàng Hóa</a>
+    </li>
+    <li class="active">Thêm Hàng hóa</li>
+</ol>
+<div class="content">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+                <h3 class="panel-title">Thêm Hàng Hóa</h3>
+        </div>
+        <div class="panel-body">
+                <form action="" method="POST" role="form">
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <label for="">Mã Hàng Hóa</label>
+                            <input type="text" class="form-control" id="" placeholder="Input field">
+                        </div>
+                
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <label for="">Tên Hàng Hóa</label>
+                            <input type="text" class="form-control" id="" placeholder="Input field">
+                        </div>
+                
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <label for="">Giá</label>
+                            <input type="number" class="form-control" id="" placeholder="Input field">
+                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <label for="">Số Lượng</label>
+                            <input type="number" class="form-control" id="" placeholder="Input field">
+                        </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <label for="">Loại</label>
+                            <select class="form-control" >
+                                                            <option>sdasd</option>
+                                                                <option>asdas</option>
+                                                                <option>as dasd</option>
+                                                                <option>asd asd</option>
+                                                                <option>asd asdas</option>
+                                                                <option>ASas</option>
+                                                                <option>qweqw</option>
+                                                                
+                                
+                            </select>
+                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                            <label for="">Nhà Cung Cấp</label>
+                            <input type="number" class="form-control" id="" placeholder="Input field">
+                        </div>
+                </div>
+                
                     
-        </tbody>
-    </table>
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#TomTat" aria-controls="TomTat" role="tab" data-toggle="tab">Tóm Tắt</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#MoTa" aria-controls="MoTa" role="tab" data-toggle="tab">Mô Tả Hàng Hóa</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#HinhAnh" aria-controls="HinhAnh" role="tab" data-toggle="tab">Hình Ảnh</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#GhiChu" aria-controls="GhiChu" role="tab" data-toggle="tab">Ghi Chú</a>
+                            </li>
+                        </ul>
+                    
+                        <!-- Tab panes -->
+                        <div class="tab-content" style="min-height:200px" >
+                            <div role="tabpanel" class="tab-pane active" id="TomTat">
+                            Tom Tắt Thông Tin Hàng Hóa
+                                <textarea name="TomTat" id="txtTomTat"  class="form-control" rows="3" required="required"></textarea>
+                                
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="MoTa">
+                            Mô Tả Thông Tin Hàng Hóa
+                            <textarea name="MoTa" id="txtMoTa"  class="form-control" rows="3" required="required"></textarea>
+                            
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="HinhAnh">
+                                <input type="file" >
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="GhiChu">
+                            <textarea name="editor1"   class="form-control" rows="3" required="required"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
 
-            
-<ul class="pagination">
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-        First
-        </a>
-    </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-            Prev
-        </a>
-    </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-            next
-        </a>
-    </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-            Last
-        </a>
-    </li>
+                
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
 
-</ul>
 
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
-      </div>
+        </div>
+    </div>
+
 </div>
-
-
+<script  src="\public\admin\plugins\ckeditor\ckeditor.js"></script>
+<script>
+        CKEDITOR.replace('txtMoTa');
+        CKEDITOR.replace('txtTomTat');
+        
+</script>
       </div>
       
       <footer class="main-footer">

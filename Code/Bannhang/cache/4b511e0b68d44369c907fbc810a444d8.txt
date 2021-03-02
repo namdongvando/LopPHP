@@ -392,10 +392,10 @@
 ">Xóa</a>
                 </th>
                 <th>1</th>
-                <th>adas</th>
-                <th>abc</th>
-                <th>asd</th>
-                <th>sdasd</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Phone</th>
+                <th>Email</th>
                 <th>1</th>
             </tr>                                   
                         
@@ -406,23 +406,23 @@
 
             
 <ul class="pagination">
-    <li class="hidden" >
+    <li >
         <a href="?pages=danhsachtaikhoan&pagesNumber=1">
         First
         </a>
     </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+    <li >
+        <a href="?pages=danhsachtaikhoan&pagesNumber=3">
             Prev
         </a>
     </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
+     <li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=5'>5</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=6'>6</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=7'>7</a></li>   
+    <li >   
+        <a href="?pages=danhsachtaikhoan&pagesNumber=5">
             next
         </a>
     </li>
-    <li class="" >
+    <li >
         <a href="?pages=danhsachtaikhoan&pagesNumber=11">
             Last
         </a>
@@ -431,11 +431,17 @@
 </ul>
 
         <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
+                            <li >
+                    <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+                    First
+                    </a>
+                </li>
+                <li >
+                    <a href="?pages=danhsachtaikhoan&pagesNumber=3">
+                        Prev
+                    </a>
+                </li>
+                                        <li class="" >
                             <a href="?pages=danhsachtaikhoan&pagesNumber=2">
                                 2                            </a>
                         </li>
@@ -443,8 +449,20 @@
                             <a href="?pages=danhsachtaikhoan&pagesNumber=3">
                                 3                            </a>
                         </li>
+                                             <li class="active" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=4">
+                                4                            </a>
+                        </li>
+                                             <li class="" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=5">
+                                5                            </a>
+                        </li>
+                                             <li class="" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=6">
+                                6                            </a>
+                        </li>
                                  <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
+                <a href="?pages=danhsachtaikhoan&pagesNumber=5">
                     next
                 </a>
             </li>

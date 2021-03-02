@@ -318,7 +318,7 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="/banhang/">
+              <a href="/">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
                
@@ -357,108 +357,53 @@
       </aside>
  
       <div class="content-wrapper">
-        11
-
+        array(0) {
+}
 
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách Loại</h3>
+            <h3 class="panel-title">Thêm Loại</h3>
       </div>
       <div class="panel-body">
-        <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
-                <th>Email</th>
-                <th>Tình Trạng</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>
-                <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
-                 <a 
-                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
-                 class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
-                </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>abc</th>
-                <th>asd</th>
-                <th>sdasd</th>
-                <th>1</th>
-            </tr>                                   
-                        
-
-                    
-        </tbody>
-    </table>
-
+            <form action="" method="POST" role="form">
+                <div class="form-group col-md-6">
+                    <label for="">Tên CTy</label>
+                    <input name="TenCTY" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Điện Thoại</label>
+                    <input name="DienThoai" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Email</label>
+                    <input type='email' name="Email" type="text" class="form-control"  placeholder="Hình Ảnh">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Người Liên Hệ</label>
+                    <input name="NguoiLienHe" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Địa Chỉ</label>
+                    <input name="DiaChi" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Website</label>
+                    <input name="WebSite" type="text" class="form-control"  placeholder="Hình Ảnh">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">fax</label>
+                    <input name="Fax" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Ghi Chu</label>
+                    <input name="GhiChu" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div> 
+                <button type="submit" name="save" class="btn btn-primary">Thêm Loại</button>
+                <button type="reset" class="btn btn-primary">Làm Lại</button>
+            </form>
             
-<ul class="pagination">
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-        First
-        </a>
-    </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-            Prev
-        </a>
-    </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-            next
-        </a>
-    </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-            Last
-        </a>
-    </li>
-
-</ul>
-
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
       </div>
 </div>
-
 
       </div>
       

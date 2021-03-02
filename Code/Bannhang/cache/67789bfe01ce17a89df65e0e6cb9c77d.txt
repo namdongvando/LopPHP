@@ -318,7 +318,7 @@
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="active">
-              <a href="/banhang/">
+              <a href="/">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
                
@@ -351,114 +351,72 @@
                 <li><a href="?pages=themncc"><i class="fa fa-circle-o"></i> Thêm NCC</a></li>
               </ul>
             </li>
+            <li class=" treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Quản Lý Hang Hóa</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="?pages=hhdanhsach"><i class="fa fa-circle-o"></i> Danh Sách Hàng Hóa</a></li>
+                <li><a href="?pages=hhthem"><i class="fa fa-circle-o"></i> Thêm Hàng Hóa</a></li>
+              </ul>
+            </li>
         </ul>
         </section>
         <!-- /.sidebar -->
       </aside>
  
       <div class="content-wrapper">
-        11
-
+        <ol class="breadcrumb">
+    <li>
+        <a href="/">Dashboard</a>
+    </li>
+    <li class="active">Danh sách hàng hóa</li>
+</ol>
 
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách Loại</h3>
+            <h3 class="panel-title">Danh sách hàng hóa</h3>
       </div>
       <div class="panel-body">
-        <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
-                <th>Email</th>
-                <th>Tình Trạng</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>
-                <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
-                 <a 
-                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
-                 class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\xampp\htdocs\banhang\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
-                </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>abc</th>
-                <th>asd</th>
-                <th>sdasd</th>
-                <th>1</th>
-            </tr>                                   
+            
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Mã</th>
+                        <th>Tên</th>
+                        <th>Giá </th>
+                        <th>Số Lượng</th>
+                        <th></th>
                         
-
+                    </tr>
+                </thead>
+                <tbody>
+                                        <tr>
+                            <td>1</td>
+                            <td>Code</td>
+                            <td>TenHH</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>#</td>
+                        </tr>
+                        
                     
-        </tbody>
-    </table>
-
+                </tbody>
+            </table>
             
-<ul class="pagination">
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-        First
-        </a>
-    </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-            Prev
-        </a>
-    </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-            next
-        </a>
-    </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-            Last
-        </a>
-    </li>
-
-</ul>
-
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+                        
       </div>
 </div>
-
 
       </div>
       
