@@ -37,6 +37,9 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <!-- jQuery 2.1.4 -->
+     <script src="./public/admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+   
   </head>
   <body class="hold-transition sidebar-collapse sidebar-mini skin-blue">
     <div class="wrapper">
@@ -367,48 +370,180 @@
  
       <div class="content-wrapper">
         
-
-
-<div class="panel panel-primary">
-      <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách NCC</h3>
-      </div>
-      <div class="panel-body">
-        <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Mã Ncc</th>
-                <th>Tên Công Ty</th>
-                <th>Điện Thoại</th>
-                <th>Email</th>
-                <th>Người Liên Hệ</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>
-                <a class="btn btn-primary"
-                 href="?pages=suancc&id=3">Sửa</a>
-                 <a 
-                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
-                 class="btn btn-danger"
-                 href="?pages=xoancc&id=3">Xóa</a>
-                </th>
-                <th>3</th>
-                <th>asdas</th>
-                <th>23423423</th>
-                <th>asdasdas@gmail.com</th>
-                <th>asdas</th>
-            </tr>                                   
-                        
-
+<ol class="breadcrumb">
+    <li>
+        <a href="/">Dashboard</a>
+    </li>
+    <li>
+        <a href="?pages=hhdanhsach">Danh Sách Hàng Hóa</a>
+    </li>
+    <li class="active">Thêm Hàng hóa</li>
+</ol>
+<div class="content">
+    <form action="" id="formThemHH" method="POST" role="form">
+        <legend>Thêm Hàng Hóa</legend>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Mã Hàng Hóa</label>
+                    <input id="hhCode" type="text" name="hh[Code]" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Tên Hàng Hóa</label>
+                    <input type="text" id="hhTenHH" name="hh[TenHH]" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Giá Hàng Hóa</label>
+                    <input type="text" id="hhGia" name="hh[Gia]" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Số Lượng</label>
+                    <input type="text" id="hhSoLuong" name="hh[SoLuong]" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Loại Hàng Hóa</label>
+                    <select  name="hh[MaLoai]" class="select2 form-control" >
+                                                        <option value="11" >sdasd</option>
+                                                                <option value="12" >asdas</option>
+                                                                <option value="13" >as dasd</option>
+                                                                <option value="14" >asd asd</option>
+                                                                <option value="15" >asd asdas</option>
+                                                                <option value="16" >ASas</option>
+                                                                <option value="17" >qweqw</option>
+                                                                <option value="18" >sdasd</option>
+                                                                <option value="19" >asdas</option>
+                                                                <option value="20" >as dasd</option>
+                                                                <option value="21" >asd asd</option>
+                                                                <option value="22" >asd asdas</option>
+                                                                <option value="23" >ASas</option>
+                                                                <option value="24" >qweqw</option>
+                                                                <option value="25" >sdasd</option>
+                                                                <option value="26" >asdas</option>
+                                                                <option value="27" >as dasd</option>
+                                                                <option value="28" >asd asd</option>
+                                                                <option value="29" >asd asdas</option>
+                                                                <option value="30" >ASas</option>
+                                                                <option value="31" >qweqw</option>
+                                                                <option value="32" >sdasd</option>
+                                                                <option value="33" >asdas</option>
+                                                                <option value="34" >as dasd</option>
+                                                                <option value="35" >asd asd</option>
+                                                                <option value="36" >asd asdas</option>
+                                                                <option value="37" >ASas</option>
+                                                                <option value="38" >qweqw</option>
+                                                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Nhà Cung Cấp</label>
+                    <select  name="hh[MaNCC]" class="select2 form-control" >
+                                                    <option value="3" >SamSung</option>
+                                                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Quy Cách đóng gói</label>
+                    <input type="text" name="hh[QuyCachDongGoi]" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Ghi Chú</label>
+                    <input type="text" name="hh[GhiChu]" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Tóm Tắt</label>
+                    <textarea id="TomTat" name="hh[TomTat]"  class="form-control" rows="3" ></textarea>
                     
-        </tbody>
-    </table>
-             
-      </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Mô Tả</label>
+                    <textarea id="MoTa" name="hh[NoiDung]"  class="form-control" rows="3" ></textarea>
+                    
+                </div>
+            </div>
+            <div class="col-md-12">
+            <label>Hình Ảnh</label>
+            <input type="file" name="fileHinhAnh" class="form-control" title="">
+            
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
 </div>
+<link rel="stylesheet" href="/public/admin/plugins/select2/select2.min.css">
+<script src="/public/admin/plugins/select2/select2.full.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js"></script>
+<script >
+    $(function(){
+        $(".select2").select2();
+        CKEDITOR.replace('TomTat');
+        CKEDITOR.replace('MoTa');
+        $("#formThemHH").submit(function(){
+            //alert("aasda");
+            try {
+                if($("#hhCode").val()==""){
+                    $("#hhCode").focus();
+                    throw "Bạn Chưa nhập mã hàng hóa";
+                }  
+                if($("#hhTenHH").val()==""){
+                    $("#hhTenHH").focus();
+                    throw "Bạn Chưa nhập Tên hàng hóa";
+                }  
+                if($("#hhGia").val()==""){
+                    $("#hhGia").focus();
+                    throw "Bạn Chưa nhập Giá hàng hóa";
+                }  
+                // giá ĐÃ NHẬP
+                var gia = $("#hhGia").val();
+                if(isNaN(gia)){
+                    $("#hhGia").focus();
+                    throw "Giá hàng hóa không hợp lệ";
+                }
+
+                if($("#hhSoLuong").val()==""){
+                    $("#hhSoLuong").focus();
+                    throw "Bạn Chưa nhập SL hàng hóa";
+                }
+                // Số Lượng ĐÃ NHẬP
+                var sl = $("#hhSoLuong").val();
+                
+                if(isNaN(sl)){
+                    $("#hhSoLuong").focus();
+                    $("#hhSoLuong").select();
+                    throw "Số Lượng hàng hóa không hợp lệ 1";
+                }
+                // 
+                sl = parseFloat(sl);
+                 
+                if(sl%1 != 0 ||sl < 0  ){
+                    $("#hhSoLuong").focus();
+                    $("#hhSoLuong").select();
+                    throw "Số Lượng hàng hóa không hợp lệ";
+                }   
+                return true;
+            } catch (error) {
+                alert(error);
+                return false;
+            }
+        });
+
+    });
+</script>
 
 
       </div>
@@ -587,8 +722,6 @@
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 
-    <!-- jQuery 2.1.4 -->
-    <script src="./public/admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->

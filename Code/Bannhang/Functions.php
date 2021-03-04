@@ -198,3 +198,18 @@ function GetHHPT($keyword,$pagesIndex,$pagesNumber,&$total){
     // thưc hiện truy vấn
     return Db()->query($sql);
 }
+function GetNccPT ($keyword,$pagesNumber,$rowNumber,&$total){
+    // tính vị trí bắt đầu
+    $pagesNumber = ($pagesNumber - 1)* $rowNumber;
+    // cau lenh truy vấn
+   $sql = "SELECT * FROM `nn_nhacungcap` 
+   WHERE `TenCTY` LIKE '%{$keyword}%'";
+   $res = Db()->query($sql);
+   // lấy tổng số dòng
+   $total = $res->num_rows;
+   // giới hạn số lượng dòng trả về
+   $sql = $sql ." limit {$pagesNumber},{$rowNumber}";
+   // trả về các dòng hiển thị
+   return Db()->query($sql);
+   
+}

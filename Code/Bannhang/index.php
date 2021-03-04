@@ -55,6 +55,9 @@ $_Content = "./Pages/{$pages}.php";
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <!-- jQuery 2.1.4 -->
+     <script src="./public/admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+   
   </head>
   <body class="hold-transition sidebar-collapse sidebar-mini skin-blue">
     <div class="wrapper">
@@ -564,8 +567,6 @@ $_Content = "./Pages/{$pages}.php";
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 
-    <!-- jQuery 2.1.4 -->
-    <script src="./public/admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->

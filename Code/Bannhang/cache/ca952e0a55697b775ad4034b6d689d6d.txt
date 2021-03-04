@@ -367,49 +367,31 @@
  
       <div class="content-wrapper">
         
-
-
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách NCC</h3>
+            <h3 class="panel-title">Thêm Loại</h3>
       </div>
       <div class="panel-body">
-        <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Mã Ncc</th>
-                <th>Tên Công Ty</th>
-                <th>Điện Thoại</th>
-                <th>Email</th>
-                <th>Người Liên Hệ</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>
-                <a class="btn btn-primary"
-                 href="?pages=suancc&id=3">Sửa</a>
-                 <a 
-                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
-                 class="btn btn-danger"
-                 href="?pages=xoancc&id=3">Xóa</a>
-                </th>
-                <th>3</th>
-                <th>asdas</th>
-                <th>23423423</th>
-                <th>asdasdas@gmail.com</th>
-                <th>asdas</th>
-            </tr>                                   
-                        
-
-                    
-        </tbody>
-    </table>
-             
+            <form enctype="multipart/form-data"
+             action="" method="POST" role="form">
+                <div class="form-group">
+                    <label for="">Tên Loại</label>
+                    <input name="Loai[TenLoai]" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group">
+                    <label for="">Ghi Chu</label>
+                    <input name="Loai[GhiChu]" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group">
+                    <label for="">Hình Ảnh</label>
+                    <input name="HinhAnh" type="file" placeholder="Hình Ảnh">
+                </div>
+                <button type="submit" name="save" class="btn btn-primary">Thêm Loại</button>
+                <button type="reset" class="btn btn-primary">Làm Lại</button>
+            </form>
+            
       </div>
 </div>
-
 
       </div>
       
