@@ -297,55 +297,51 @@
       </aside>
  
       <div class="content-wrapper">
-        <ol class="breadcrumb">
-    <li>
-        <a href="/">Dashboard</a>
-    </li>
-    <li class="active">Danh sách hàng hóa</li>
-</ol>
+        array(0) {
+}
 
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh sách hàng hóa</h3>
+            <h3 class="panel-title">Thêm Loại</h3>
       </div>
       <div class="panel-body">
+            <form action="" method="POST" role="form">
+                <div class="form-group col-md-6">
+                    <label for="">Tên CTy</label>
+                    <input name="TenCTY" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Điện Thoại</label>
+                    <input name="DienThoai" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Email</label>
+                    <input type='email' name="Email" type="text" class="form-control"  placeholder="Hình Ảnh">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Người Liên Hệ</label>
+                    <input name="NguoiLienHe" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Địa Chỉ</label>
+                    <input name="DiaChi" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Website</label>
+                    <input name="WebSite" type="text" class="form-control"  placeholder="Hình Ảnh">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">fax</label>
+                    <input name="Fax" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Ghi Chu</label>
+                    <input name="GhiChu" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div> 
+                <button type="submit" name="save" class="btn btn-primary">Thêm Loại</button>
+                <button type="reset" class="btn btn-primary">Làm Lại</button>
+            </form>
             
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Mã</th>
-                        <th>Tên</th>
-                        <th>Giá </th>
-                        <th>Số Lượng</th>
-                        <th></th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                                        <tr>
-                            <td>1</td>
-                            <td>Code</td>
-                            <td>TenHH</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>#</td>
-                        </tr>
-                        
-                    
-                </tbody>
-            </table>
-            
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-                        
       </div>
 </div>
 

@@ -213,3 +213,20 @@ function GetNccPT ($keyword,$pagesNumber,$rowNumber,&$total){
    return Db()->query($sql);
    
 }
+function Login ($username,$password){
+ $sql = "SELECT * FROM `nn_admin` 
+ WHERE (
+     `Username` = '{$username}' 
+     or `Email` = '{$username}'
+     ) and 
+     `Password` = sha1(CONCAT(`Randomkey`,'{$password}'))";
+//thực hien truy vấn     
+$res = Db()->query($sql);
+// lấy tổng số dòng
+$total = $res->num_rows;
+if($total > 0)
+    return $res->fetch_array();
+    
+return null;
+}
+

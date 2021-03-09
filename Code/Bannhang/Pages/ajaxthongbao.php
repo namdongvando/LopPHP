@@ -37,6 +37,30 @@
         <li>
         <a href="#">
             <div class="pull-left">
+            <img src="./public/admin/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+            </div>
+            <h4>
+            AdminLTE Design Team
+            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+            </h4>
+            <p>Why not buy a new awesome theme?</p>
+        </a>
+        </li>
+        <li>
+        <a href="#">
+            <div class="pull-left">
+            <img src="./public/admin/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+            </div>
+            <h4>
+            AdminLTE Design Team
+            <small><i class="fa fa-clock-o"></i> 2 hours</small>
+            </h4>
+            <p>Why not buy a new awesome theme?</p>
+        </a>
+        </li>
+        <li>
+        <a href="#">
+            <div class="pull-left">
             <img src="./public/admin/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
             </div>
             <h4>

@@ -1,4 +1,28 @@
+<?php 
 
+ $start = microtime(true); 
+ 
+include("ConnectDB.php");
+include("Functions.php");
+include("ReadCache.php");
+//echo md5($_SERVER["REQUEST_URI"]) ;
+$_SESSION["UserInfo"] = isset($_SESSION["UserInfo"])
+?$_SESSION["UserInfo"]:null;
+if($_SESSION["UserInfo"] == null){
+    header("Location: ./login.php");
+} 
+// đã đăng nhap
+$userInfo = $_SESSION["UserInfo"];
+// var_dump($userInfo);
+$pages =  "index";
+if(isset($_GET["pages"])){
+    $pages = $_GET["pages"];
+} 
+$_Content = "./Pages/".$pages.".php";
+$_Content = "./Pages/{$pages}.php";
+
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -179,14 +203,14 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="./public/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Teo nguyen</span>
+                  <span class="hidden-xs"><?php echo $userInfo["Name"] ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src="./public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     <p>
-                    Teo nguyen - Web Developer
+                    <?php echo $userInfo["Name"] ?> - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -208,7 +232,8 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="?pages=logout"
+                       class="btn btn-default btn-flat">Đăng Xuất</a>
                     </div>
                   </li>
                 </ul>
@@ -231,7 +256,7 @@
               <img src="./public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Teo nguyen</p>
+              <p><?php echo $userInfo["Name"]; ?></p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -297,57 +322,9 @@
       </aside>
  
       <div class="content-wrapper">
-        <ol class="breadcrumb">
-    <li>
-        <a href="/">Dashboard</a>
-    </li>
-    <li class="active">Danh sách hàng hóa</li>
-</ol>
-
-<div class="panel panel-primary">
-      <div class="panel-heading">
-            <h3 class="panel-title">Danh sách hàng hóa</h3>
-      </div>
-      <div class="panel-body">
-            
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Mã</th>
-                        <th>Tên</th>
-                        <th>Giá </th>
-                        <th>Số Lượng</th>
-                        <th></th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                                        <tr>
-                            <td>1</td>
-                            <td>Code</td>
-                            <td>TenHH</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>#</td>
-                        </tr>
-                        
-                    
-                </tbody>
-            </table>
-            
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-                        
-      </div>
-</div>
+        <?php
+        include $_Content;
+        ?>
 
       </div>
       
@@ -566,3 +543,8 @@
   </body>
 </html>
 
+<?php 
+include("SaveCache.php");
+$end = microtime(true); 
+ echo $end - $start;
+?>

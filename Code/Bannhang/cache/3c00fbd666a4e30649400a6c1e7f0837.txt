@@ -297,55 +297,81 @@
       </aside>
  
       <div class="content-wrapper">
-        <ol class="breadcrumb">
-    <li>
-        <a href="/">Dashboard</a>
-    </li>
-    <li class="active">Danh sách hàng hóa</li>
-</ol>
-
+        array(10) {
+  ["MaNCC"]=>
+  string(1) "4"
+  ["TenCTY"]=>
+  string(10) "as asd asd"
+  ["DienThoai"]=>
+  string(8) "23423423"
+  ["Email"]=>
+  string(14) "asda@gmail.com"
+  ["NguoiLienHe"]=>
+  string(5) "asdas"
+  ["DiaChi"]=>
+  string(5) "asdas"
+  ["Website"]=>
+  string(0) ""
+  ["Fax"]=>
+  string(0) ""
+  ["GhiChu"]=>
+  string(0) ""
+  ["save"]=>
+  string(0) ""
+}
+UPDATE `nn_nhacungcap` SET 
+    
+    `TenCTY`='as asd asd',
+    `DienThoai`='23423423',
+    `Email`='asda@gmail.com',
+    `NguoiLienHe`='asdas',
+    `DiaChi`='asdas',
+    `Website`='',
+    `Fax`='',
+    `GhiChu`='' WHERE `MaNCC`='4'
 <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh sách hàng hóa</h3>
+            <h3 class="panel-title">Thêm Loại</h3>
       </div>
       <div class="panel-body">
+            <form action="" method="POST" role="form">
+                <div class="form-group col-md-6">
+                    <label for="">Tên CTy</label>
+                    <input value="4" name="MaNCC" type="hidden" >
+                    <input value="as asd asd" name="TenCTY" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Điện Thoại</label>
+                    <input value="23423423" name="DienThoai" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Email</label>
+                    <input value="asda@gmail.com" type='email' name="Email" type="text" class="form-control"  placeholder="Hình Ảnh">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Người Liên Hệ</label>
+                    <input value="asdas" name="NguoiLienHe" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Địa Chỉ</label>
+                    <input value="asdas" name="DiaChi" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Website</label>
+                    <input value="" name="Website" type="text" class="form-control"  placeholder="Hình Ảnh">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">fax</label>
+                    <input value="" name="Fax" type="text" class="form-control"  placeholder="Tên Loại">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Ghi Chu</label>
+                    <input value="" name="GhiChu" type="text" class="form-control"  placeholder="Ghi Chú">
+                </div> 
+                <button type="submit" name="save" class="btn btn-primary">Sửa NCC</button>
+                <button type="reset" class="btn btn-primary">Làm Lại</button>
+            </form>
             
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Mã</th>
-                        <th>Tên</th>
-                        <th>Giá </th>
-                        <th>Số Lượng</th>
-                        <th></th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                                        <tr>
-                            <td>1</td>
-                            <td>Code</td>
-                            <td>TenHH</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>#</td>
-                        </tr>
-                        
-                    
-                </tbody>
-            </table>
-            
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-                        
       </div>
 </div>
 

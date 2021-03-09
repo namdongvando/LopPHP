@@ -297,57 +297,214 @@
       </aside>
  
       <div class="content-wrapper">
-        <ol class="breadcrumb">
-    <li>
-        <a href="/">Dashboard</a>
-    </li>
-    <li class="active">Danh sách hàng hóa</li>
-</ol>
-
-<div class="panel panel-primary">
+        <div class="panel panel-primary">
       <div class="panel-heading">
-            <h3 class="panel-title">Danh sách hàng hóa</h3>
+            <h3 class="panel-title">Danh Sách Loại</h3>
       </div>
       <div class="panel-body">
-            
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Mã</th>
-                        <th>Tên</th>
-                        <th>Giá </th>
-                        <th>Số Lượng</th>
-                        <th></th>
+      <form action="" method="get" >  
+            <div class="form-inline" >
+                <input type="text" name="keyword" >
+                <input value="loai" type="hidden" name="pages" >
+                <input type="submit" value="Tìm Kiếm" >
+            </div>
+      </form>
+      
+        <select 
+        onchange="window.location.href=
+        '?pages=loai&rowNumber='+this.value" >
+           
+            <option selected >10</option>
+            <option  >20</option>
+            <option  >50</option>
+            <option  >100</option>
+        </select>
+        <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Mã Loại</th>
+                <th>Tên Loại</th>
+                <th>Hình Ảnh</th>
+                <th>Ghi Chú</th>
+            </tr>
+        </thead>
+        <tbody>
+                        <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=11">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=11">Xóa</a>
+                </th>
+                <th>11</th>
+                <th>sdasd</th>
+                <th>./public/loai/11-Home_one_02 - Copy.gif</th>
+                <th>sdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=12">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=12">Xóa</a>
+                </th>
+                <th>12</th>
+                <th>asdas</th>
+                <th>asdas</th>
+                <th>dasd</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=13">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=13">Xóa</a>
+                </th>
+                <th>13</th>
+                <th>as dasd</th>
+                <th></th>
+                <th>asd asasdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=14">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=14">Xóa</a>
+                </th>
+                <th>14</th>
+                <th>asd asd</th>
+                <th></th>
+                <th>as asdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=15">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=15">Xóa</a>
+                </th>
+                <th>15</th>
+                <th>asd asdas</th>
+                <th></th>
+                <th>d asdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=16">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=16">Xóa</a>
+                </th>
+                <th>16</th>
+                <th>ASas</th>
+                <th>./public/loai/1611668380Home_one_05 - Copy.gif</th>
+                <th>sASa</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=17">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=17">Xóa</a>
+                </th>
+                <th>17</th>
+                <th>qweqw</th>
+                <th>./public/loai/1611668392Home_one_02 - Copy.gif</th>
+                <th>eqweqw</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=18">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=18">Xóa</a>
+                </th>
+                <th>18</th>
+                <th>sdasd</th>
+                <th>./public/loai/11-Home_one_02 - Copy.gif</th>
+                <th>sdas</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=19">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=19">Xóa</a>
+                </th>
+                <th>19</th>
+                <th>asdas</th>
+                <th>asdas</th>
+                <th>dasd</th>
+            </tr>                                   
+                            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=20">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=20">Xóa</a>
+                </th>
+                <th>20</th>
+                <th>as dasd</th>
+                <th></th>
+                <th>asd asasdas</th>
+            </tr>                                   
                         
-                    </tr>
-                </thead>
-                <tbody>
-                                        <tr>
-                            <td>1</td>
-                            <td>Code</td>
-                            <td>TenHH</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>#</td>
-                        </tr>
-                        
+
                     
-                </tbody>
-            </table>
+        </tbody>
+    </table>
+
             
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-                        
+<ul class="pagination">
+    <li class="hidden" >
+        <a href="?pages=loai&pagesNumber=1&rowNumber=10">
+        First
+        </a>
+    </li>
+    <li class="hidden" >
+        <a href="?pages=loai&pagesNumber=1&rowNumber=10">
+            Prev
+        </a>
+    </li>
+     <li class='active' ><a href='?pages=loai&pagesNumber=1&rowNumber=10'>1</a></li><li class='' ><a href='?pages=loai&pagesNumber=2&rowNumber=10'>2</a></li><li class='' ><a href='?pages=loai&pagesNumber=3&rowNumber=10'>3</a></li>   
+    <li class="" >   
+        <a href="?pages=loai&pagesNumber=2&rowNumber=10">
+            next
+        </a>
+    </li>
+    <li class="" >
+        <a href="?pages=loai&pagesNumber=3&rowNumber=10">
+            Last
+        </a>
+    </li>
+
+</ul>
+
       </div>
 </div>
+
 
       </div>
       
