@@ -1,7 +1,36 @@
 <!DOCTYPE html>
 
 <?php
- 
+
+include "ConnectDB.php";
+include "Functions.php";
+
+$_SESSION["UserInfo"] = isset($_SESSION["UserInfo"])
+?$_SESSION["UserInfo"]:null;
+if($_SESSION["UserInfo"]){
+// đã đăng nhap
+  header("Location: ./admin.php");
+}
+$loi  = "";
+// chưa đăng nhập
+if(isset($_POST["DangNhap"])){
+  try {
+    // kiểm tra đăng nhập
+    $password = $_POST["password"];
+    $username = $_POST["username"];
+    $userInfor =  Login($username,$password);
+    if($userInfor == null){
+    // đăng nhập không thành công
+      throw new Exception("Tài khoản hoặc mật khẩu không đúng");
+    }
+    // đăng nhập thành công
+    $_SESSION["UserInfo"] = $userInfor;
+    header("Location: ./admin.php");
+  } catch (Exception $e) {
+    $loi  = $e->getMessage();
+  }
+  
+}
 
 ?>
 
@@ -36,14 +65,14 @@
         <a href=""><b>Quản Lý Nội Dung</b></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg"><?php echo $loi; ?></p>
         <form action="" method="post">
           <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="text" name="username" class="form-control" placeholder="Email">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" name="password" class="form-control" placeholder="Password">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
@@ -55,7 +84,7 @@
               </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
+              <button name="DangNhap" type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
             </div><!-- /.col -->
           </div>
         </form>

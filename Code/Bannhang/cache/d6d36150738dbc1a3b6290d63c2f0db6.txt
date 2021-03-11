@@ -205,7 +205,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <a href="./admin.php?pages=profile" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
                       <a href="?pages=logout"
@@ -298,7 +298,8 @@
       </aside>
  
       <div class="content-wrapper">
-        <div class="content">
+        
+<div class="content">
     
     <div class="panel panel-primary">
           <div class="panel-heading">
@@ -312,11 +313,11 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="">Email</label>
-                        <input value="sdasd" name="user[Email]" type="email" class="form-control" >
+                        <input value="sdasdaasdas@gmail.com" name="user[Email]" type="email" class="form-control" >
                     </div>
                     <div class="form-group col-md-3">
                         <label for="">SĐT</label>
-                        <input value="asd" name="user[Phone]" type="text" class="form-control" >
+                        <input value="1312312312312312" name="user[Phone]" type="text" class="form-control" >
                     </div>
                     
                     <div class="form-group col-md-3">
@@ -325,14 +326,14 @@
                     </div>
                     <div class="form-group col-md-12">
                         <label for="">Địa Chỉ</label>
-                        <input value="asdas" name="user[Address]" type="text" class="form-control" >
+                        <input value="23423423 sdasd asdasdas" name="user[Address]" type="text" class="form-control" >
                     </div>
                     <div class="form-group col-md-3">
                         <label for="GioiTinh">Giới Tính Nam</label>
-                        <input checked  name="user[Sex]" id="GioiTinh" type="checkbox" class="" >
+                        <input value="1"   name="user[Sex]" id="GioiTinh" type="checkbox" class="" >
                     </div>
                     <div class="clearfix"></div>
-                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <button name="LuuThongTinChung" type="submit" class="btn btn-primary">Lưu</button>
                 </form>
                 
           </div>
@@ -342,7 +343,23 @@
                 <h3 class="panel-title">Bảo Mật</h3>
           </div>
           <div class="panel-body">
-                Panel content
+          <form action="" method="POST" >
+          <p>Cập nhật thành công</p>
+          <div class="form-group col-md-4">
+                        <label for="GioiTinh">Mật Khẩu Cũ</label>
+                        <input required  name="userpassword[oldPassword]"  type="password" class="form-control" >
+                </div>
+                <div class="form-group col-md-4">
+                        <label for="GioiTinh">Mật Khẩu Mới</label>
+                        <input  required name="userpassword[newPassword]"  type="password" class="form-control" >
+                </div>
+                <div class="form-group col-md-4">
+                        <label for="GioiTinh">Nhập Lại Mật Khẩu</label>
+                        <input required  name="userpassword[rePassword]"  type="password" class="form-control" >
+                </div>
+                <button name="Capnhatmatkhau" type="submit" class="btn btn-primary">Cập Nhât Mật Khẩu</button>
+          </form>
+          
           </div>
     </div>
     

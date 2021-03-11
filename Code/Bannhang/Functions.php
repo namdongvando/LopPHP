@@ -230,3 +230,22 @@ if($total > 0)
 return null;
 }
 
+function UserUpdate($username,$info)
+{
+     $sql ="UPDATE `nn_admin` SET 
+     `Email` = '{$info["Email"]}', 
+     `Phone` = '{$info["Phone"]}', 
+     `BOD` = '{$info["BOD"]}', 
+     `Sex` = '{$info["Sex"]}', 
+     `Address` = '{$info["Address"]}' 
+     WHERE `Username` = '{$username}'";
+    return Db()->query($sql);
+}
+function UserUpdatePassword($username,$password)
+{
+     $sql ="UPDATE `nn_admin` 
+     SET  `Password`= SHA1(concat(`Randomkey`,'{$password}')) 
+     WHERE `Username` = '{$username}'";
+    return Db()->query($sql);
+}
+
