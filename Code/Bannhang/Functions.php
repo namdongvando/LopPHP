@@ -248,4 +248,9 @@ function UserUpdatePassword($username,$password)
      WHERE `Username` = '{$username}'";
     return Db()->query($sql);
 }
-
+function GetQuangCaoByGroups($groups){
+    $sql = "SELECT * FROM `nn_quangcao` 
+    WHERE `Groups` = '{$groups}' 
+    ORDER BY `STT`";
+    return Db()->query($sql);
+}
