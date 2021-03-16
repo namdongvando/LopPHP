@@ -254,3 +254,10 @@ function GetQuangCaoByGroups($groups){
     ORDER BY `STT`";
     return Db()->query($sql);
 }
+function TopSanPhamBanChay($number = 10)
+{
+    // 10 sản phẩm bán chạy nhất
+    $sql = "SELECT * FROM `dienthoai` 
+    ORDER BY `SoLanMua`  DESC limit 0,{$number}";
+    return Db()->query($sql);
+}

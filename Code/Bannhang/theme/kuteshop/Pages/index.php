@@ -99,13 +99,16 @@
                       </ul>
                       <div class="tab-container">
                             <div id="tab-1" class="tab-panel active">
-                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true" data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":3}}'>
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true" data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":4}}'>
+                                    <?php 
+                                    $TopDSSanPhamBanChay = TopSanPhamBanChay(10);
+                                    while($row = $TopDSSanPhamBanChay->fetch_array()){
+                                    ?>
                                     <li>
                                         <div class="left-block">
                                             <a href="#">
-                                                <img class="lazy img-responsive" alt="product" 
-                                                src="./public/loading.svg" 
-                                                data-src="./public/kuteshop/assets/data/bs1.jpg" />
+                                                <img style="height:250px;"  class="img-responsive" alt="product" 
+                                                src="./public/images/upload/hinhchinh/<?php echo $row["urlHinh"] ?>" />
                                             </a>
                                             <div class="quick-view">
                                                     <a title="Add to my wishlist" class="heart" href="#"></a>
@@ -116,15 +119,19 @@
                                                 <a title="Add to Cart" href="#">Add to Cart</a>
                                             </div>
                                             <div class="group-price">
-                                                <span class="product-new">NEW</span>
+                                                <span class="product-new">HOT</span>
                                                 <span class="product-sale">Sale</span>
                                             </div>
                                         </div>
                                         <div class="right-block">
-                                            <h5 class="product-name"><a href="#">Sexy Lady</a></h5>
+                                            <h5 class="product-name"><a href="#"><?php echo $row["TenDT"] ?></a></h5>
                                             <div class="content_price">
-                                                <span class="price product-price">$38,95</span>
-                                                <span class="price old-price">$52,00</span>
+                                                <span class="price product-price">
+                                                    <?php echo number_format($row["Gia"],0,",","."); ?><sup>đ</sup>
+                                                </span>
+                                                <span class="price old-price">
+                                                    <?php echo number_format($row["GiaKM"],0,",","."); ?>
+                                                </span>
                                             </div>
                                             <div class="product-star">
                                                 <i class="fa fa-star"></i>
@@ -135,90 +142,13 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="left-block">
-                                            <a href="#"><img class="img-responsive" alt="product" src="./public/kuteshop/assets/data/bs2.jpg" /></a>
-                                            <div class="quick-view">
-                                                    <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                    <a title="Add to compare" class="compare" href="#"></a>
-                                                    <a title="Quick view" class="search" href="#"></a>
-                                            </div>
-                                            <div class="add-to-cart">
-                                                <a title="Add to Cart" href="#">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                        <div class="right-block">
-                                            <h5 class="product-name"><a href="#">Perfect Dress</a></h5>
-                                            <div class="content_price">
-                                                <span class="price product-price">$38,95</span>
-                                                <span class="price old-price">$52,00</span>
-                                            </div>
-                                            <div class="product-star">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half-o"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="left-block">
-                                            <a href="#"><img class="img-responsive" alt="product" src="./public/kuteshop/assets/data/bs3.jpg" /></a>
-                                            <div class="quick-view">
-                                                    <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                    <a title="Add to compare" class="compare" href="#"></a>
-                                                    <a title="Quick view" class="search" href="#"></a>
-                                            </div>
-                                            <div class="add-to-cart">
-                                                <a title="Add to Cart" href="#">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                        <div class="group-price">
-                                                <span class="product-new">NEW</span>
-                                        </div>
-                                        <div class="right-block">
-                                            <h5 class="product-name"><a href="#">Fresh Summer</a></h5>
-                                            <div class="content_price">
-                                                <span class="price product-price">$38,95</span>
-                                                <span class="price old-price">$52,00</span>
-                                            </div>
-                                            <div class="product-star">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half-o"></i>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="left-block">
-                                            <a href="#"><img class="img-responsive" alt="product" src="./public/kuteshop/assets/data/bs4.jpg" /></a>
-                                            <div class="quick-view">
-                                                    <a title="Add to my wishlist" class="heart" href="#"></a>
-                                                    <a title="Add to compare" class="compare" href="#"></a>
-                                                    <a title="Quick view" class="search" href="#"></a>
-                                            </div>
-                                            <div class="add-to-cart">
-                                                <a title="Add to Cart" href="#">Add to Cart</a>
-                                            </div>
-                                        </div>
-                                        <div class="right-block">
-                                            <h5 class="product-name"><a href="#">Flowers Dress</a></h5>
-                                            <div class="content_price">
-                                                <span class="price product-price">$38,95</span>
-                                                <span class="price old-price">$52,00</span>
-                                            </div>
-                                            <div class="product-star">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star-half-o"></i>
-                                            </div>
-                                        </div>
-                                    </li>
+                                    <?php 
+                                    }
+
+                                    ?>
+                                    
+                                    
+                                     
                                 </ul>
                             </div>
                             <div id="tab-2" class="tab-panel">
@@ -456,7 +386,7 @@
                     <div class="latest-deal-content">
                         <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true" data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":1}}'>
                             <li>
-                                <div class="count-down-time" data-countdown="2018/06/27"></div>
+                                <div class="count-down-time" data-countdown="2021/06/27"></div>
                                 <div class="left-block">
                                     <a href="#"><img class="img-responsive" alt="product" src="./public/kuteshop/assets/data/ld1.jpg" /></a>
                                     <div class="quick-view">

@@ -9,7 +9,7 @@ define("dbdate" , "Y-m-d H:i:s");
 
 ob_start();
 session_start();
-$GLOBALS["db"]  = new mysqli('localhost', 'root', '', 'quanlytintuc'); 
+$GLOBALS["db"]  = new mysqli('localhost', 'root', '', 'webbanhang'); 
 if($db->connect_errno>0) die( "Lỗi: " . $db->connect_error ); 
 $db->set_charset("utf8");
 
