@@ -1,44 +1,50 @@
-<?php 
-
-function Db(){
+<?php
+function Db()
+{
     return $GLOBALS['db'];
 }
 
-function XinChao($hoTen){
+function XinChao($hoTen)
+{
 
-    return "Xin chao" . $hoTen; 
+    return "Xin chao" . $hoTen;
 }
 
-function  GetLoaiById($id){
+function  GetLoaiById($id)
+{
     $sql = "SELECT * FROM `nn_loai`
-     WHERE `MaLoai` = {$id}";
+     WHERE `idLoai` = {$id}";
     $res = Db()->query($sql);
     $loai = $res->fetch_array();
     return $loai;
-}  
+}
 
-function UpdateLoai($loai){
+function UpdateLoai($loai)
+{
     $sql = "UPDATE `nn_loai` SET 
     `TenLoai`='{$loai['TenLoai']}',
     `GhiChu`='{$loai['GhiChu']}',
     `HinhAnh`='{$loai['HinhAnh']}' WHERE `MaLoai` = {$loai['MaLoai']}";
     Db()->query($sql);
 }
- function InsertLoai($loai){
+function InsertLoai($loai)
+{
     $sql = "INSERT INTO `nn_loai` SET 
     `TenLoai`='{$loai['TenLoai']}',
     `GhiChu`='{$loai['GhiChu']}',
     `HinhAnh`='{$loai['HinhAnh']}'";
     Db()->query($sql);
- }
- function UploadFile($fileUpload,$filePath){
-    copy($fileUpload["tmp_name"],$filePath);
- }
- // lấy danh sách tài khoản và phân trang
- function GetAdminsPT ($keyword,$pagesNumber,$rowNumber,&$total){
-     // tính vị trí bắt đầu
-     $pagesNumber = ($pagesNumber - 1)* $rowNumber;
-     // cau lenh truy vấn
+}
+function UploadFile($fileUpload, $filePath)
+{
+    copy($fileUpload["tmp_name"], $filePath);
+}
+// lấy danh sách tài khoản và phân trang
+function GetAdminsPT($keyword, $pagesNumber, $rowNumber, &$total)
+{
+    // tính vị trí bắt đầu
+    $pagesNumber = ($pagesNumber - 1) * $rowNumber;
+    // cau lenh truy vấn
     $sql = "SELECT * FROM `nn_admin` 
     WHERE `Name` LIKE '%{$keyword}%' 
     OR `Username` LIKE '%{$keyword}%' 
@@ -48,32 +54,32 @@ function UpdateLoai($loai){
     // lấy tổng số dòng
     $total = $res->num_rows;
     // giới hạn số lượng dòng trả về
-    $sql = $sql ." limit {$pagesNumber},{$rowNumber}";
+    $sql = $sql . " limit {$pagesNumber},{$rowNumber}";
     // trả về các dòng hiển thị
     return Db()->query($sql);
-    
- } 
- // lấy danh sách tài khoản và phân trang
- function GetLoaiPT ($keyword,$pagesNumber,$rowNumber,&$total){
+}
+// lấy danh sách tài khoản và phân trang
+function GetLoaiPT($keyword, $pagesNumber, $rowNumber, &$total)
+{
     // tính vị trí bắt đầu
-    $pagesNumber = ($pagesNumber - 1)* $rowNumber;
+    $pagesNumber = ($pagesNumber - 1) * $rowNumber;
     // cau lenh truy vấn
-   $sql = "SELECT * FROM `nn_loai` 
+    $sql = "SELECT * FROM `nn_loai` 
    WHERE `TenLoai` LIKE '%{$keyword}%'";
-   $res = Db()->query($sql);
-   // lấy tổng số dòng
-   $total = $res->num_rows;
-   // giới hạn số lượng dòng trả về
-   $sql = $sql ." limit {$pagesNumber},{$rowNumber}";
-   // trả về các dòng hiển thị
-   return Db()->query($sql);
-   
+    $res = Db()->query($sql);
+    // lấy tổng số dòng
+    $total = $res->num_rows;
+    // giới hạn số lượng dòng trả về
+    $sql = $sql . " limit {$pagesNumber},{$rowNumber}";
+    // trả về các dòng hiển thị
+    return Db()->query($sql);
 }
 //  $sql = "SELECT * FROM `nn_loai`";
 //  $db->query($sql); 
 
- function InsertTaiKhoan($tk){
-     $sql = "INSERT INTO 
+function InsertTaiKhoan($tk)
+{
+    $sql = "INSERT INTO 
     `nn_admin` 
     (`Id`,  `Name`,  `Username`,  `Password`, 
     `Randomkey`,  `Email`,  `Phone`,  `BOD`, 
@@ -88,55 +94,58 @@ function UpdateLoai($loai){
       '{$tk["Address"]}', 
       '{$tk["Active"]}', NULL)";
     Db()->query($sql);
-
- }  
-function RandomString($lenght =10){
-    $strrand = time().rand(0,time());
+}
+function RandomString($lenght = 10)
+{
+    $strrand = time() . rand(0, time());
     $strrand = sha1($strrand);
-    return substr($strrand,0,($lenght-1));
+    return substr($strrand, 0, ($lenght - 1));
 }
 
-function GetTaiKhoanByUsername($un){
+function GetTaiKhoanByUsername($un)
+{
     // tìm tài khoản theo username
     $sql = "SELECT * FROM `nn_admin` where Username = '{$un}'";
     $res =  Db()->query($sql);
-    if($res->num_rows > 0)
+    if ($res->num_rows > 0)
         return $res->fetch_array();
     return null;
 }
-function GetTaiKhoanByEmail($email){
+function GetTaiKhoanByEmail($email)
+{
     // tìm tài khoản theo username
     $sql = "SELECT * FROM `nn_admin` where Email = '{$email}'";
     $res =  Db()->query($sql);
-    if($res->num_rows > 0)
+    if ($res->num_rows > 0)
         return $res->fetch_array();
     return null;
 }
-function PhanTrang($totalPages,$curentPage,$link){
-    $next = $curentPage +1;
-    $next = min($totalPages,$next);
-    
+function PhanTrang($totalPages, $curentPage, $link)
+{
+    $next = $curentPage + 1;
+    $next = min($totalPages, $next);
+
     $prev = $curentPage - 1;
-    $prev = max(1,$prev);
-    
+    $prev = max(1, $prev);
+
     $start = $curentPage - 3;
-    $start = max(1,$start);
+    $start = max(1, $start);
     $end = $curentPage + 3;
-    $end = min($totalPages,$end);
+    $end = min($totalPages, $end);
     // linh next
-    $linkNext = str_replace("[i]",$next,$link);
+    $linkNext = str_replace("[i]", $next, $link);
     // linh prev
-    $linkPrev = str_replace("[i]",$prev,$link);
+    $linkPrev = str_replace("[i]", $prev, $link);
     // linh Last
-    $linkLast = str_replace("[i]",$totalPages,$link);
+    $linkLast = str_replace("[i]", $totalPages, $link);
     // linh First
-    $linkFirst = str_replace("[i]",1,$link);
+    $linkFirst = str_replace("[i]", 1, $link);
     //?pages=danhsachtaikhoan&pagesNumber=[i]
 
-    $isFirst = $curentPage == 1?"hidden":"";
-    $isLast = $curentPage == $totalPages?"hidden":"";
+    $isFirst = $curentPage == 1 ? "hidden" : "";
+    $isLast = $curentPage == $totalPages ? "hidden" : "";
 
-$String = <<<PHANTRANG
+    $String = <<<PHANTRANG
 
 <ul class="pagination">
     <li class="{$isFirst}" >
@@ -165,74 +174,76 @@ $String = <<<PHANTRANG
 
 PHANTRANG;
 
-$forString = "";
+    $forString = "";
 
-    for ($i=$start; $i <= $end ; $i++) { 
+    for ($i = $start; $i <= $end; $i++) {
         // tao linnk cho trang
-        $linkPages= str_replace("[i]",$i,$link);
+        $linkPages = str_replace("[i]", $i, $link);
         // xac dinh có active
-        $active = $curentPage == $i?"active":"";
+        $active = $curentPage == $i ? "active" : "";
         // thêm trang đó vào forString
         $strPages = "<li class='{$active}' ><a href='{$linkPages}'>{$i}</a></li>";
-        $forString.=$strPages;
+        $forString .= $strPages;
     }
     // đổi __for__ thành danh sach lap
-    $String = str_replace("__for__",$forString,$String);
+    $String = str_replace("__for__", $forString, $String);
     return $String;
 }
 // lấy hàng hóa phan trang
-function GetHHPT($keyword,$pagesIndex,$pagesNumber,&$total){
+function GetHHPT($keyword, $pagesIndex, $pagesNumber, &$total)
+{
     // tính vị trí cần lấy theo trang
-    $pagesIndex = $pagesIndex-1;
-    $pagesIndex= max($pagesIndex,0);
+    $pagesIndex = $pagesIndex - 1;
+    $pagesIndex = max($pagesIndex, 0);
     // câu lenh truy vấn lấy tất cả các dòng
     $sql =  "SELECT * FROM `nn_hanghoa` WHERE 
     `Code` LIKE '%{$keyword}%' 
     or `TenHH` LIKE '%{$keyword}%'";
-     // thực hiện câu lệnh truy vấn
-     $res = Db()->query($sql);
-     // lấy tổng số dòng
-     $total = $res->num_rows;
-     // lấy các dòng o trang hiện tại
+    // thực hiện câu lệnh truy vấn
+    $res = Db()->query($sql);
+    // lấy tổng số dòng
+    $total = $res->num_rows;
+    // lấy các dòng o trang hiện tại
     $sql .= " limit {$pagesIndex},{$pagesNumber}";
     // thưc hiện truy vấn
     return Db()->query($sql);
 }
-function GetNccPT ($keyword,$pagesNumber,$rowNumber,&$total){
+function GetNccPT($keyword, $pagesNumber, $rowNumber, &$total)
+{
     // tính vị trí bắt đầu
-    $pagesNumber = ($pagesNumber - 1)* $rowNumber;
+    $pagesNumber = ($pagesNumber - 1) * $rowNumber;
     // cau lenh truy vấn
-   $sql = "SELECT * FROM `nn_nhacungcap` 
+    $sql = "SELECT * FROM `nn_nhacungcap` 
    WHERE `TenCTY` LIKE '%{$keyword}%'";
-   $res = Db()->query($sql);
-   // lấy tổng số dòng
-   $total = $res->num_rows;
-   // giới hạn số lượng dòng trả về
-   $sql = $sql ." limit {$pagesNumber},{$rowNumber}";
-   // trả về các dòng hiển thị
-   return Db()->query($sql);
-   
+    $res = Db()->query($sql);
+    // lấy tổng số dòng
+    $total = $res->num_rows;
+    // giới hạn số lượng dòng trả về
+    $sql = $sql . " limit {$pagesNumber},{$rowNumber}";
+    // trả về các dòng hiển thị
+    return Db()->query($sql);
 }
-function Login ($username,$password){
- $sql = "SELECT * FROM `nn_admin` 
+function Login($username, $password)
+{
+    $sql = "SELECT * FROM `nn_admin` 
  WHERE (
      `Username` = '{$username}' 
      or `Email` = '{$username}'
      ) and 
      `Password` = sha1(CONCAT(`Randomkey`,'{$password}'))";
-//thực hien truy vấn     
-$res = Db()->query($sql);
-// lấy tổng số dòng
-$total = $res->num_rows;
-if($total > 0)
-    return $res->fetch_array();
-    
-return null;
+    //thực hien truy vấn     
+    $res = Db()->query($sql);
+    // lấy tổng số dòng
+    $total = $res->num_rows;
+    if ($total > 0)
+        return $res->fetch_array();
+
+    return null;
 }
 
-function UserUpdate($username,$info)
+function UserUpdate($username, $info)
 {
-     $sql ="UPDATE `nn_admin` SET 
+    $sql = "UPDATE `nn_admin` SET 
      `Email` = '{$info["Email"]}', 
      `Phone` = '{$info["Phone"]}', 
      `BOD` = '{$info["BOD"]}', 
@@ -241,14 +252,15 @@ function UserUpdate($username,$info)
      WHERE `Username` = '{$username}'";
     return Db()->query($sql);
 }
-function UserUpdatePassword($username,$password)
+function UserUpdatePassword($username, $password)
 {
-     $sql ="UPDATE `nn_admin` 
+    $sql = "UPDATE `nn_admin` 
      SET  `Password`= SHA1(concat(`Randomkey`,'{$password}')) 
      WHERE `Username` = '{$username}'";
     return Db()->query($sql);
 }
-function GetQuangCaoByGroups($groups){
+function GetQuangCaoByGroups($groups)
+{
     $sql = "SELECT * FROM `nn_quangcao` 
     WHERE `Groups` = '{$groups}' 
     ORDER BY `STT`";
@@ -259,5 +271,36 @@ function TopSanPhamBanChay($number = 10)
     // 10 sản phẩm bán chạy nhất
     $sql = "SELECT * FROM `dienthoai` 
     ORDER BY `SoLanMua`  DESC limit 0,{$number}";
+    return Db()->query($sql);
+}
+function TopSanPhamGiamGia($number = 10)
+{
+    // 10 sản phẩm giảm Giá
+    $sql = "SELECT * FROM `dienthoai` 
+    Where `GiaKM` < `Gia` 
+    ORDER BY `Gia` DESC 
+    limit 0,{$number}";
+    return Db()->query($sql);
+}
+function TopSanPhamMoi($number = 10)
+{
+    // 10 sản phẩm giảm Giá
+    $sql = "SELECT * FROM `dienthoai` 
+    ORDER BY `NgayCapNhat` DESC 
+    limit 0,{$number}";
+    return Db()->query($sql);
+}
+function GetDienThoaiByIdLoai($idLoai,$number = 10)
+{
+    $sql = "SELECT * FROM `dienthoai` 
+    where `idLoai` = '{$idLoai}' 
+    ORDER BY `NgayCapNhat` DESC limit 0,{$number}";
+    return Db()->query($sql);
+}
+function GetDienThoaiBanChayNhatTheoLoai($idLoai)
+{
+    $sql ="SELECT * FROM `dienthoai` 
+    where `idLoai` = '{$idLoai}' 
+    ORDER BY `SoLanMua` DESC limit 0,10";
     return Db()->query($sql);
 }
