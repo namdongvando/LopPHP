@@ -197,5 +197,4 @@
                 </div>
             </div><!-- /.cate-box -->
         </div> <!-- /#hot-categories -->
-
     </div> <!-- /.container -->

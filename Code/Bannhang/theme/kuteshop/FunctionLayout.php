@@ -153,9 +153,7 @@ function ThemePageTop()
                                         }
 
                                         ?>
-
-
-
+ 
                                     </ul>
                                 </div>
                                 <div id="tab-2" class="tab-panel">

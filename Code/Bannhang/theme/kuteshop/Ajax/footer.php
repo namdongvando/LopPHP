@@ -3,7 +3,7 @@
             <div id="introduce-box" class="row">
                 <div class="col-md-3">
                     <div id="address-box">
-                        <a href="#"><img src="./public/kuteshop/assets/data/introduce-logo.png" alt="" /></a>
+                        <a href="#"><img src="/public/kuteshop/assets/data/introduce-logo.png" alt="" /></a>
                         <div id="address-list">
                             <div class="tit-name">Address:</div>
                             <div class="tit-contain">Example Street 68, Mahattan, New York, USA.</div>
@@ -76,34 +76,34 @@
                     <ul id="trademark-list">
                         <li id="payment-methods">Accepted Payment Methods</li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-ups.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-ups.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-qiwi.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-qiwi.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-wu.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-wu.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-cn.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-cn.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-visa.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-visa.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-mc.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-mc.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-ems.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-ems.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-dhl.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-dhl.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-fe.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-fe.jpg"  alt="ups"/></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./public/kuteshop/assets/data/trademark-wm.jpg"  alt="ups"/></a>
+                            <a href="#"><img src="/public/kuteshop/assets/data/trademark-wm.jpg"  alt="ups"/></a>
                         </li>
                     </ul> 
                 </div>

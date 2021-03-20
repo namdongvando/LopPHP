@@ -7,6 +7,7 @@ include_once("FunctionLayout.php");
 
 <head>
     <meta charset="UTF-8">
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/lib/font-awesome/css/font-awesome.min.css" />
@@ -18,12 +19,9 @@ include_once("FunctionLayout.php");
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/responsive.css" />
-
     <title>www Kute shop</title>
 </head>
-
 <body class="<?php echo $_pages == "index" ? 'home' : '' ?>">
-
     <?php
     include_once("Header.php");
     ?>
@@ -36,15 +34,15 @@ include_once("FunctionLayout.php");
 
     <a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
     <!-- Script-->
-    <script type="text/javascript" src="./public/kuteshop/assets/lib/jquery/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/lib/select2/js/select2.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/lib/owl.carousel/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/lib/jquery.countdown/jquery.countdown.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/js/jquery.actual.min.js"></script>
-    <script type="text/javascript" src="./public/kuteshop/assets/js/theme-script.js"></script>
-    <script type="text/javascript" src="./public/lazyloadimg/lazyloading.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/owl.carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery.countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/js/theme-script.js"></script>
+    <script type="text/javascript" src="/public/lazyloadimg/lazyloading.js"></script>
     <script type="text/javascript">
         $(function() {
             // lấy tất cả html nào có class là ajaxHtml
@@ -72,5 +70,6 @@ include_once("FunctionLayout.php");
 <?php
 $str = ob_get_clean();
 $str = str_replace("[ThemePageTop]", ThemePageTop(), $str);
+
 echo $str;
 ?>

@@ -119,13 +119,16 @@
                                 if($index >=11){
                                     $class = "cat-link-orther";
                                 }
+                                $tenkhongdau = $loai["TenKhongDau"];
+                                $linkLoai = 
+                                "/loai/{$tenkhongdau}.html";
                                 $index ++;
                                 ?>
                                 <li  class="<?php echo $class; ?>" >
-                                    <a href="#">
+                                    <a href="<?php echo $linkLoai; ?>">
                                         <img class="icon-menu" 
                                         alt="Funky roots" 
-                                        src="./public/kuteshop/assets/data/1.png">
+                                        src="/public/kuteshop/assets/data/1.png">
                                         <?php echo $loai["TenLoai"]; ?>
                                     </a>
                                 </li> 
@@ -171,11 +174,9 @@
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="#">Home</a></li>
-                                   
-                                     
-                                    <li><a href="category.html">Furniture</a></li>
-                                    <li><a href="category.html">Jewelry</a></li>
-                                    <li><a href="category.html">Blog</a></li>
+                                    <li><a href="/gioi-thieu.html">Giới Thiệu</a></li>
+                                    <li><a href="category.html">Sản Phẩm</a></li>
+                                    <li><a href="category.html">Tin Tức</a></li>
                                 </ul>
                             </div><!--/.nav-collapse -->
                         </div>

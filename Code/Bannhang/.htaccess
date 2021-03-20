@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^gioi-thieu\.html$ index.php?pages=gioithieu&alias=gioi-thieu [L]
+# /loai/abc-asda-as-d-asda.html
+RewriteRule ^loai\/(.*)\.html$ /index.php?pages=loai&alias=$1 [L]

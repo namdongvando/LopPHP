@@ -290,7 +290,7 @@ function TopSanPhamMoi($number = 10)
     limit 0,{$number}";
     return Db()->query($sql);
 }
-function GetDienThoaiByIdLoai($idLoai,$number = 10)
+function GetDienThoaiByIdLoai($idLoai, $number = 10)
 {
     $sql = "SELECT * FROM `dienthoai` 
     where `idLoai` = '{$idLoai}' 
@@ -299,8 +299,26 @@ function GetDienThoaiByIdLoai($idLoai,$number = 10)
 }
 function GetDienThoaiBanChayNhatTheoLoai($idLoai)
 {
-    $sql ="SELECT * FROM `dienthoai` 
+    $sql = "SELECT * FROM `dienthoai` 
     where `idLoai` = '{$idLoai}' 
     ORDER BY `SoLanMua` DESC limit 0,10";
     return Db()->query($sql);
+}
+function GetLoaiTinByAlias($alias)
+{
+    $sql = "SELECT * FROM `loaitin` 
+    where `Alias` = '{$alias}'";
+    $res =  Db()->query($sql);
+    if ($res)
+        return $res->fetch_array();
+    return null;
+}
+function GetLoaiByAlias($alias)
+{
+    $sql = "SELECT * FROM `nn_loai` 
+    where `TenKhongDau` = '{$alias}'";
+    $res =  Db()->query($sql);
+    if ($res)
+        return $res->fetch_array();
+    return null;
 }

@@ -21,7 +21,11 @@
 <!---->
 <div class="content-page">
     <div class="container">
-        <div data-id="#contentpageAjax" data-url="/ajax.php?pages=contentpage" class="ajaxHtml" id="contentpageAjax" >
+        <div 
+        data-id="#contentpageAjax" 
+        data-url="/ajax.php?pages=contentpage" 
+        class="ajaxHtml" 
+        id="contentpageAjax" >
        
         </div> 
       
