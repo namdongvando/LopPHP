@@ -19,6 +19,8 @@ include_once("FunctionLayout.php");
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/lib/fancyBox/jquery.fancybox.css" />
+    <link rel="stylesheet" href="./public/kuteshop/style.css">
     <title>www Kute shop</title>
 </head>
 <body class="<?php echo $_pages == "index" ? 'home' : '' ?>">
@@ -37,6 +39,8 @@ include_once("FunctionLayout.php");
     <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/fancyBox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery.elevatezoom.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/owl.carousel/owl.carousel.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery.countdown/jquery.countdown.min.js"></script>

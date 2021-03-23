@@ -297,6 +297,32 @@ function GetDienThoaiByIdLoai($idLoai, $number = 10)
     ORDER BY `NgayCapNhat` DESC limit 0,{$number}";
     return Db()->query($sql);
 }
+function GetDienThoaiByIdLoaiPT($idLoai, $pagesIndex,$rowNumber,$order,&$total)
+{
+    // tinh vi trí 
+    $pagesIndex = ($pagesIndex - 1) * $rowNumber;
+    $pagesIndex = max(0,$pagesIndex);
+    $order = $order == "name"?"TenDT":"GiaKM";
+    $order = " ORDER BY `{$order}` ASC ";
+    $sql  ="SELECT * FROM `dienthoai` WHERE `idLoai` = '{$idLoai}'";
+    $res = Db()->query($sql);
+    // lấy tổng số dòng
+    $total = $res->num_rows;
+    $sql  .= $order." limit {$pagesIndex},{$rowNumber} ";
+    // echo $sql;
+    return Db()->query($sql);
+//     // cau lenh truy vấn
+//     $sql = "SELECT * FROM `nn_nhacungcap` 
+//    WHERE `TenCTY` LIKE '%{$keyword}%'";
+//     $res = Db()->query($sql);
+//     // lấy tổng số dòng
+//     $total = $res->num_rows;
+//     // giới hạn số lượng dòng trả về
+//     $sql = $sql . " limit {$pagesNumber},{$rowNumber}";
+//     // trả về các dòng hiển thị
+//     return Db()->query($sql);
+
+}
 function GetDienThoaiBanChayNhatTheoLoai($idLoai)
 {
     $sql = "SELECT * FROM `dienthoai` 
@@ -321,4 +347,62 @@ function GetLoaiByAlias($alias)
     if ($res)
         return $res->fetch_array();
     return null;
+}
+function LinkSanPham($idSanPham)
+{
+    return "/index.php?pages=chitietsanpham&idsp={$idSanPham}";
+}
+function GetDienThoaiByIdDT($idDT)
+{ 
+    $sql = "SELECT * FROM `dienthoai` 
+    WHERE `idDT` ='{$idDT}'";
+    $res =  Db()->query($sql);
+    if ($res)
+        return $res->fetch_array();
+    return null;
+
+}
+// 
+function GetThuocTinhByIdDT($idDT)
+{ 
+    $sql = "SELECT * FROM `thuoctinh` WHERE `idDT` = '{$idDT}'";
+    $res =  Db()->query($sql);
+    if ($res)
+        return $res->fetch_assoc();
+    return null;
+
+}
+function GetHinhByIdDT($idDT)
+{ 
+    $sql = "SELECT * FROM `hinh` 
+    WHERE `idDT` ='{$idDT}'";
+    $res =  Db()->query($sql);
+    return $res;
+}
+function UrlHinh($fileName)
+{
+    return "/public/images/upload/hinhchinh/{$fileName}";
+}
+function UrlHinhPhu($fileName)
+{
+    return "/public/images/upload/hinhphu/{$fileName}";
+}
+function GetNameThuocTinh($k)
+{   
+    $a=[
+        "tinh_nang_noi_bat"=>"Tính Năng Nổi Bật",
+        "may_anh"=>"Máy ảnh",
+        "dac_tinh_may_anh"=>"Tính Năng Nổi Bật",
+        "may_phu_anh"=>"Tính Năng Nổi Bật",
+        "video_call"=>"Tính Năng Nổi Bật",
+        "quay_phim"=>"Tính Năng Nổi Bật",
+        "xem_phim"=>"Tính Năng Nổi Bật",
+        "nghe_nhac"=>"Tính Năng Nổi Bật",
+        "fm_radio"=>"Tính Năng Nổi Bật",
+        "xem_tivi"=>"Tính Năng Nổi Bật",
+        "ghi_am"=>"Tính Năng Nổi Bật",
+    ];
+    if(isset($a[$k]))
+        return $a[$k];
+    return "";
 }

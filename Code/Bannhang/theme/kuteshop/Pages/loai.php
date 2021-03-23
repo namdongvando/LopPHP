@@ -1,8 +1,27 @@
 <?php
+//?pages=loai&alias=nokia&pageindex=1&numberrow=18
 $alias = $_GET["alias"];
 $loaiHH = GetLoaiByAlias($alias);
-$sanPhamTheoLoai = GetDienThoaiByIdLoai($loaiHH["idLoai"], 12);
-
+$numberrow = isset($_GET["numberrow"]) ? intval($_GET["numberrow"]) : 12;
+$pagesindex = isset($_GET["pagesindex"]) ? intval($_GET["pagesindex"]) : 1;
+$orderby = isset($_GET["orderby"]) ? $_GET["orderby"] : "price";
+$total = 0;
+// lấy sản phẩm theo loại phân trang
+$sanPhamTheoLoai = GetDienThoaiByIdLoaiPT(
+    $loaiHH["idLoai"],
+    $pagesindex,
+    $numberrow,
+    $orderby,
+    $total
+);
+// lấy sản phẩm theo loại phân trang
+// /loai/LG-pages-1-18-name.html
+$Link = "/loai/{$alias}-pages-{$pagesindex}-{$numberrow}-{$orderby}.html";
+$linkNumberRow =
+"/loai/{$alias}-pages-{$pagesindex}-";
+$linkPrice = "/loai/{$alias}-pages-{$pagesindex}-{$numberrow}-";
+$linkPagination = 
+"/loai/{$alias}-pages-[i]-{$numberrow}-{$orderby}.html";
 ?>
 <div class="columns-container">
     <div class="container" id="columns">
@@ -448,7 +467,7 @@ $sanPhamTheoLoai = GetDienThoaiByIdLoai($loaiHH["idLoai"], 12);
                             <li class="col-sx-12 col-sm-4">
                                 <div class="product-container">
                                     <div class="left-block">
-                                        <a href="#">
+                                        <a href="<?php echo LinkSanPham($dienThoai["idDT"]) ?>">
                                             <img style="height: 250px;" class="img-responsive" alt="product" src="<?php echo $hinh ?>" />
                                         </a>
                                         <div class="quick-view">
@@ -461,12 +480,13 @@ $sanPhamTheoLoai = GetDienThoaiByIdLoai($loaiHH["idLoai"], 12);
                                         </div>
                                     </div>
                                     <div class="right-block">
-                                        <h5 class="product-name"><a href="#">
+                                        <h5 class="product-name">
+                                            <a href="<?php echo LinkSanPham($dienThoai["idDT"]) ?>">
                                                 <?php echo $dienThoai["TenDT"]; ?>
                                             </a>
                                         </h5>
                                         <div class="product-star">
-                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star-half-o"></i>
@@ -516,32 +536,28 @@ $sanPhamTheoLoai = GetDienThoaiByIdLoai($loaiHH["idLoai"], 12);
                 <div class="sortPagiBar">
                     <div class="bottom-pagination">
                         <nav>
-                            <ul class="pagination">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">Next &raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <?php
+                        $totalPages = ceil($total/$numberrow);
+                        echo PhanTrang($totalPages,$pagesindex,$linkPagination);
+                        ?>
                         </nav>
                     </div>
                     <div class="show-product-item">
-                        <select name="">
-                            <option value="">Show 18</option>
-                            <option value="">Show 20</option>
-                            <option value="">Show 50</option>
-                            <option value="">Show 100</option>
+                        <select onchange="window.location.href='<?php echo $linkNumberRow ?>'+this.value+'-<?php echo $orderby ?>.html'">
+                            <option <?php echo $numberrow == 18 ? 'selected' : '' ?> value="18">Hiện 18</option>
+                            <option <?php echo $numberrow == 24 ? 'selected' : '' ?> value="24">Hiện 24</option>
+                            <option <?php echo $numberrow == 36 ? 'selected' : '' ?> value="36">Hiện 36</option>
+                            <option <?php echo $numberrow == 48 ? 'selected' : '' ?> value="48">Hiện 48</option>
                         </select>
                     </div>
                     <div class="sort-product">
-                        <select>
-                            <option value="">Product Name</option>
-                            <option value="">Price</option>
+                        <select onchange="window.location.href='<?php echo $linkPrice ?>'+this.value+'.html'">
+                            <option <?php echo $orderby == 'name' ? 'selected' : '' ?> value="name">
+                                Tên Sản Phẩm
+                            </option>
+                            <option <?php echo $orderby == 'price' ? 'selected' : '' ?> value="price">
+                                Giá
+                            </option>
                         </select>
                         <div class="sort-product-icon">
                             <i class="fa fa-sort-alpha-asc"></i>
