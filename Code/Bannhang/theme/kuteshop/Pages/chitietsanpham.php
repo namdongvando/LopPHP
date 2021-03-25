@@ -400,7 +400,9 @@ $discount = (($sanPham["Gia"] - $sanPham["GiaKM"]) / $sanPham["Gia"]) * 100;
                             </div>
                             <div class="form-action">
                                 <div class="button-group">
-                                    <a class="btn-add-cart" href="#">Add to cart</a>
+                                    <a class="btn-add-cart" href="#">Thêm Giỏ Hàng</a>
+                                    <a class="btn-add-cart" 
+                                    href="/index.php?pages=giohang&ThemGH=<?php echo $sanPham["idDT"]; ?>">Mua Nhanh</a>
                                 </div>
                                 <div class="button-group">
                                     <a class="wishlist" href="#"><i class="fa fa-heart-o"></i>
@@ -544,7 +546,8 @@ $discount = (($sanPham["Gia"] - $sanPham["GiaKM"]) / $sanPham["Gia"]) * 100;
                                             <a title="Quick view" class="search" href="#"></a>
                                         </div>
                                         <div class="add-to-cart">
-                                            <a title="Add to Cart" href="#add">Add to Cart</a>
+                                            <a title="Add to Cart" href="#add">Thêm Giỏ Hàng</a>
+                                        
                                         </div>
                                     </div>
                                     <div class="right-block">
@@ -575,7 +578,8 @@ $discount = (($sanPham["Gia"] - $sanPham["GiaKM"]) / $sanPham["Gia"]) * 100;
                                             <a title="Quick view" class="search" href="#"></a>
                                         </div>
                                         <div class="add-to-cart">
-                                            <a title="Add to Cart" href="#add">Add to Cart</a>
+                                            <a title="Add to Cart" href="#add">Thêm Giỏ Hàng</a>
+                                            <a title="Add to Cart" href="#add">Mua Nhanh</a>
                                         </div>
                                     </div>
                                     <div class="right-block">

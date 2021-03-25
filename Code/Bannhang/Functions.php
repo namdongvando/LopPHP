@@ -393,16 +393,20 @@ function GetNameThuocTinh($k)
         "tinh_nang_noi_bat"=>"Tính Năng Nổi Bật",
         "may_anh"=>"Máy ảnh",
         "dac_tinh_may_anh"=>"Tính Năng Nổi Bật",
-        "may_phu_anh"=>"Tính Năng Nổi Bật",
-        "video_call"=>"Tính Năng Nổi Bật",
-        "quay_phim"=>"Tính Năng Nổi Bật",
-        "xem_phim"=>"Tính Năng Nổi Bật",
-        "nghe_nhac"=>"Tính Năng Nổi Bật",
-        "fm_radio"=>"Tính Năng Nổi Bật",
+        "may_phu_anh"=>"Má Ảnh Phụ",
+        "video_call"=>"Video Call",
+        "quay_phim"=>"Quay Phim",
+        "xem_phim"=>"Xem Phim",
+        "nghe_nhac"=>"Nghe Nhạc",
+        "fm_radio"=>"FM Radio",
         "xem_tivi"=>"Tính Năng Nổi Bật",
         "ghi_am"=>"Tính Năng Nổi Bật",
     ];
     if(isset($a[$k]))
         return $a[$k];
     return "";
+}
+function GiaVND($number)
+{ 
+    return number_format($number,0,",",".")."<sup>đ</sup>";
 }
