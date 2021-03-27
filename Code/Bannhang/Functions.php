@@ -1,4 +1,7 @@
 <?php
+define("HinhThucThanhToan","HTTT");
+define("HinhThucGiaoHang","HTGH");
+
 function Db()
 {
     return $GLOBALS['db'];
@@ -409,4 +412,11 @@ function GetNameThuocTinh($k)
 function GiaVND($number)
 { 
     return number_format($number,0,",",".")."<sup>đ</sup>";
+}
+function GetOptionByGroups($Groups)
+{ 
+    $sql = "SELECT * FROM `options` 
+    WHERE `groups` ='{$Groups}'";
+    $res =  Db()->query($sql);
+    return $res;
 }

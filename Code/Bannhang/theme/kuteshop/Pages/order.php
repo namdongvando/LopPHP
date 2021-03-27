@@ -94,8 +94,8 @@
                     </tfoot>
                 </table>
                 <div class="cart_navigation">
-                    <a class="prev-btn" href="#">Continue shopping</a>
-                    <a class="next-btn" href="#">Proceed to checkout</a>
+                    <a class="prev-btn" href="/">Tiếp Tục Mua Sắm</a>
+                    <a class="next-btn" href="index.php?pages=dathang">Đặt Hàng</a>
                 </div>
             </div>
         </div>

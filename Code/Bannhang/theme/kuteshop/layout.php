@@ -23,6 +23,7 @@ include_once("FunctionLayout.php");
     <link rel="stylesheet" href="./public/kuteshop/style.css">
     <title>www Kute shop</title>
 </head>
+
 <body class="<?php echo $_pages == "index" ? 'home' : '' ?>">
     <?php
     include_once("Header.php");
@@ -50,6 +51,29 @@ include_once("FunctionLayout.php");
     <script type="text/javascript">
         $(function() {
             // lấy tất cả html nào có class là ajaxHtml
+            $("#isNhanHang").each(function() {
+                var isCheck = $(this).prop("checked");
+                // kiểm tra isNhanHang có được check không
+                // khi mới vào trang
+                console.log(isCheck);
+                if (isCheck == true) {
+                    $("#ThongTinGiaoHang").hide();
+                } else {
+                    $("#ThongTinGiaoHang").show();
+                }
+                // khi nó thay đổi
+                $(this).change(function() {
+                    var isCheck = $(this).prop("checked");
+                    if (isCheck == true) {
+                        $("#ThongTinGiaoHang").hide();
+                    } else {
+                        $("#ThongTinGiaoHang").show();
+                    }
+                });
+
+            });
+
+            $("select").select2();
             $(".ajaxHtml").each(function() {
                 var data = $(this).data();
                 console.log(data);
@@ -63,7 +87,39 @@ include_once("FunctionLayout.php");
                     });
 
             });
+            $(".ajaxSelect").each(function() {
+                $(this).change(() => {
+                    var data = $(this).data();
+                    var url = data.urlselect + $(this).val();
+                    $.ajax({
+                            method: "GET",
+                            url: url,
+                        })
+                        .done(function(msg) {
+                            $(data.target).html(msg);
+                        });
 
+                });
+
+
+            });
+
+            $("#FormDatHang").submit(function(){
+                try {
+                    if($("#TenKhachHang").val()==""){
+                        $("#TenKhachHang").focus();
+                        throw "Bạn Chưa Nhập Tên";
+                    }
+                    if($("#DienThoai").val()==""){
+                        $("#DienThoai").focus();
+                        throw "Bạn Chưa Nhập Số Điện Thoại";
+                    }
+                    return true;
+                } catch (error) {
+                    alert(error);
+                }
+                return false;
+            });
 
         });
     </script>
