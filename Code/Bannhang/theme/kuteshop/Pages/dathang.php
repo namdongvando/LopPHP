@@ -3,7 +3,7 @@ $hinhThucGiaoHang = GetOptionByGroups(HinhThucGiaoHang);
 $hinhThanhToan = GetOptionByGroups(HinhThucThanhToan);
 
 ?>
-<form action="" id="FormDatHang" method="POST">
+<form action="?pages=xulydathang" id="FormDatHang" method="POST">
 
     <div class="columns-container">
         <div class="container" id="columns">
@@ -40,27 +40,27 @@ $hinhThanhToan = GetOptionByGroups(HinhThucThanhToan);
                             </div>
                             <div class="col-sm-4">
                                 <label for="first_name" class="required">Tỉnh Thành</label>
-                                <select class="form-control ajaxSelect ajaxHtml" name="TinhThanh" data-urlselect="ajax.php?pages=quanhuyen&code=" data-target="#QuanHuyen" data-url="ajax.php?pages=tinhthanh" data-id="#TinhThanh" id="TinhThanh"></select>
+                                <select data-clear="#PhuongXa" style="width: 100%;" class="form-control ajaxSelect ajaxHtml" name="TinhThanh" data-urlselect="ajax.php?pages=quanhuyen&code=" data-target="#QuanHuyen" data-url="ajax.php?pages=tinhthanh" data-id="#TinhThanh" id="TinhThanh"></select>
                             </div>
                             <!--/ [col] -->
                             <div class="col-sm-4">
                                 <label for="email_address" class="required">Quận Huyện</label>
-                                <select name="QuanHuyen" class="input form-control ajaxSelect" data-target="#PhuongXa" data-urlselect="ajax.php?pages=phuongxa&code=" name="" id="QuanHuyen"></select>
+                                <select style="width: 100%;" name="QuanHuyen" class="input form-control ajaxSelect" data-target="#PhuongXa" data-urlselect="ajax.php?pages=phuongxa&code=" name="QuanHuyen" id="QuanHuyen"></select>
                             </div>
                             <div class="col-sm-4">
                                 <label for="email_address" class="required">Phường Xã</label>
-                                <select name="PhuongXa" class="input form-control" name="" id="PhuongXa"></select>
+                                <select style="width: 100%;"  class="phuongxa input form-control" name="PhuongXa" id="PhuongXa"></select>
                             </div>
                             <div class="col-sm-12">
                                 <label for="email_address" class="required">Đường, Số Nhà</label>
-                                <input name="SoNha" class="input form-control" name="" id="SoNha"></input>
+                                <input name="SoNha" class="input form-control" name="SoNha" id="SoNha"></input>
                             </div>
                             <!--/ [col] -->
                         </li>
                         <!--/ .row -->
                         <li>
                             <label class="btn btn-primary">
-                                <input type="checkbox" checked id="isNhanHang"> Tôi Là Người Nhận Hàng
+                                <input type="checkbox" name="isNhanHang" checked id="isNhanHang"> Tôi Là Người Nhận Hàng
                             </label>
                         </li>
                     </ul>
@@ -84,16 +84,16 @@ $hinhThanhToan = GetOptionByGroups(HinhThucThanhToan);
                             </div>
                             <div class="col-sm-4">
                                 <label for="first_name" class="required">Tỉnh Thành</label>
-                                <select name="TinhThanh1" class="form-control ajaxSelect ajaxHtml" data-urlselect="ajax.php?pages=quanhuyen&code=" data-target="#QuanHuyen1" data-url="ajax.php?pages=tinhthanh" data-id="#TinhThanh1" id="TinhThanh1"></select>
+                                <select style="width: 100%;" name="TinhThanh1" class="form-control ajaxSelect ajaxHtml" data-urlselect="ajax.php?pages=quanhuyen&code=" data-target="#QuanHuyen1" data-url="ajax.php?pages=tinhthanh" data-id="#TinhThanh1" id="TinhThanh1"></select>
                             </div>
                             <!--/ [col] -->
                             <div class="col-sm-4">
                                 <label for="email_address" class="required">Quận Huyện</label>
-                                <select name="QuanHuyen1" class="input form-control ajaxSelect" data-target="#PhuongXa1" data-urlselect="ajax.php?pages=phuongxa&code=" name="" id="QuanHuyen1"></select>
+                                <select style="width: 100%;" name="QuanHuyen1" class="input form-control ajaxSelect" data-target="#PhuongXa1" data-urlselect="ajax.php?pages=phuongxa&code=" name="" id="QuanHuyen1"></select>
                             </div>
                             <div class="col-sm-4">
                                 <label for="email_address" class="required">Phường Xã</label>
-                                <select name="PhuongXa1" class="input form-control" name="" id="PhuongXa1"></select>
+                                <select style="width: 100%;" name="PhuongXa1" class="input form-control" name="" id="PhuongXa1"></select>
                             </div>
                             <div class="col-sm-12">
                                 <label for="email_address" class="required">Đường, Số Nhà</label>

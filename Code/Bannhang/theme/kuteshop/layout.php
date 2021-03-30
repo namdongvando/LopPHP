@@ -90,6 +90,9 @@ include_once("FunctionLayout.php");
             $(".ajaxSelect").each(function() {
                 $(this).change(() => {
                     var data = $(this).data();
+                    var clearObj = data.clear;
+                    console.log(clearObj);
+                    $(clearObj).html("").select2();
                     var url = data.urlselect + $(this).val();
                     $.ajax({
                             method: "GET",
@@ -97,6 +100,7 @@ include_once("FunctionLayout.php");
                         })
                         .done(function(msg) {
                             $(data.target).html(msg);
+                            $(data.target).select2();
                         });
 
                 });
@@ -114,6 +118,50 @@ include_once("FunctionLayout.php");
                         $("#DienThoai").focus();
                         throw "Bạn Chưa Nhập Số Điện Thoại";
                     }
+                    if($("#TinhThanh").val()==""){
+                        $("#TinhThanh").focus();
+                        throw "Bạn Chưa Chọn Tỉnh Thành";
+                    }
+                    if($("#QuanHuyen").val()==""){
+                        $("#QuanHuyen").focus();
+                        throw "Bạn Chưa Chọn Quận Huyện";
+                    }
+                    if($("#PhuongXa").val()==""){
+                        $("#PhuongXa").focus();
+                        throw "Bạn Chưa Chọn Phường Xã";
+                    }
+                    if($("#SoNha").val()==""){
+                        $("#SoNha").focus();
+                        throw "Bạn Chưa Nhập Số Nhà";
+                    }
+                    var isCheck = $("#isNhanHang").prop("checked");
+                    if(isCheck == false){
+                        if($("#HoTen1").val()==""){
+                        $("#HoTen1").focus();
+                        throw "Bạn Chưa Nhập Tên Người Nhận";
+                    }
+                    if($("#DienThoai1").val()==""){
+                        $("#DienThoai1").focus();
+                        throw "Bạn Chưa Nhập Số Điện Thoại Nhận Hàng";
+                    }
+                    if($("#TinhThanh1").val()==""){
+                        $("#TinhThanh1").focus();
+                        throw "Bạn Chưa Chọn Tỉnh Thành";
+                    }
+                    if($("#QuanHuyen1").val()==""){
+                        $("#QuanHuyen1").focus();
+                        throw "Bạn Chưa Chọn Quận Huyện";
+                    }
+                    if($("#PhuongXa1").val()==""){
+                        $("#PhuongXa1").focus();
+                        throw "Bạn Chưa Chọn Phường Xã";
+                    }
+                    if($("#SoNha1").val()==""){
+                        $("#SoNha1").focus();
+                        throw "Bạn Chưa Nhập Số Nhà";
+                    }
+                    }
+
                     return true;
                 } catch (error) {
                     alert(error);
@@ -123,6 +171,7 @@ include_once("FunctionLayout.php");
 
         });
     </script>
+    
 </body>
 <!-- Mirrored from kutethemes.com/demo/kuteshop/html/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2015 07:15:06 GMT -->
 

@@ -1,6 +1,6 @@
 <?php
-define("HinhThucThanhToan","HTTT");
-define("HinhThucGiaoHang","HTGH");
+define("HinhThucThanhToan", "HTTT");
+define("HinhThucGiaoHang", "HTGH");
 
 function Db()
 {
@@ -300,30 +300,30 @@ function GetDienThoaiByIdLoai($idLoai, $number = 10)
     ORDER BY `NgayCapNhat` DESC limit 0,{$number}";
     return Db()->query($sql);
 }
-function GetDienThoaiByIdLoaiPT($idLoai, $pagesIndex,$rowNumber,$order,&$total)
+function GetDienThoaiByIdLoaiPT($idLoai, $pagesIndex, $rowNumber, $order, &$total)
 {
     // tinh vi trí 
     $pagesIndex = ($pagesIndex - 1) * $rowNumber;
-    $pagesIndex = max(0,$pagesIndex);
-    $order = $order == "name"?"TenDT":"GiaKM";
+    $pagesIndex = max(0, $pagesIndex);
+    $order = $order == "name" ? "TenDT" : "GiaKM";
     $order = " ORDER BY `{$order}` ASC ";
-    $sql  ="SELECT * FROM `dienthoai` WHERE `idLoai` = '{$idLoai}'";
+    $sql  = "SELECT * FROM `dienthoai` WHERE `idLoai` = '{$idLoai}'";
     $res = Db()->query($sql);
     // lấy tổng số dòng
     $total = $res->num_rows;
-    $sql  .= $order." limit {$pagesIndex},{$rowNumber} ";
+    $sql  .= $order . " limit {$pagesIndex},{$rowNumber} ";
     // echo $sql;
     return Db()->query($sql);
-//     // cau lenh truy vấn
-//     $sql = "SELECT * FROM `nn_nhacungcap` 
-//    WHERE `TenCTY` LIKE '%{$keyword}%'";
-//     $res = Db()->query($sql);
-//     // lấy tổng số dòng
-//     $total = $res->num_rows;
-//     // giới hạn số lượng dòng trả về
-//     $sql = $sql . " limit {$pagesNumber},{$rowNumber}";
-//     // trả về các dòng hiển thị
-//     return Db()->query($sql);
+    //     // cau lenh truy vấn
+    //     $sql = "SELECT * FROM `nn_nhacungcap` 
+    //    WHERE `TenCTY` LIKE '%{$keyword}%'";
+    //     $res = Db()->query($sql);
+    //     // lấy tổng số dòng
+    //     $total = $res->num_rows;
+    //     // giới hạn số lượng dòng trả về
+    //     $sql = $sql . " limit {$pagesNumber},{$rowNumber}";
+    //     // trả về các dòng hiển thị
+    //     return Db()->query($sql);
 
 }
 function GetDienThoaiBanChayNhatTheoLoai($idLoai)
@@ -356,27 +356,25 @@ function LinkSanPham($idSanPham)
     return "/index.php?pages=chitietsanpham&idsp={$idSanPham}";
 }
 function GetDienThoaiByIdDT($idDT)
-{ 
+{
     $sql = "SELECT * FROM `dienthoai` 
     WHERE `idDT` ='{$idDT}'";
     $res =  Db()->query($sql);
     if ($res)
         return $res->fetch_array();
     return null;
-
 }
 // 
 function GetThuocTinhByIdDT($idDT)
-{ 
+{
     $sql = "SELECT * FROM `thuoctinh` WHERE `idDT` = '{$idDT}'";
     $res =  Db()->query($sql);
     if ($res)
         return $res->fetch_assoc();
     return null;
-
 }
 function GetHinhByIdDT($idDT)
-{ 
+{
     $sql = "SELECT * FROM `hinh` 
     WHERE `idDT` ='{$idDT}'";
     $res =  Db()->query($sql);
@@ -391,32 +389,67 @@ function UrlHinhPhu($fileName)
     return "/public/images/upload/hinhphu/{$fileName}";
 }
 function GetNameThuocTinh($k)
-{   
-    $a=[
-        "tinh_nang_noi_bat"=>"Tính Năng Nổi Bật",
-        "may_anh"=>"Máy ảnh",
-        "dac_tinh_may_anh"=>"Tính Năng Nổi Bật",
-        "may_phu_anh"=>"Má Ảnh Phụ",
-        "video_call"=>"Video Call",
-        "quay_phim"=>"Quay Phim",
-        "xem_phim"=>"Xem Phim",
-        "nghe_nhac"=>"Nghe Nhạc",
-        "fm_radio"=>"FM Radio",
-        "xem_tivi"=>"Tính Năng Nổi Bật",
-        "ghi_am"=>"Tính Năng Nổi Bật",
+{
+    $a = [
+        "tinh_nang_noi_bat" => "Tính Năng Nổi Bật",
+        "may_anh" => "Máy ảnh",
+        "dac_tinh_may_anh" => "Tính Năng Nổi Bật",
+        "may_phu_anh" => "Má Ảnh Phụ",
+        "video_call" => "Video Call",
+        "quay_phim" => "Quay Phim",
+        "xem_phim" => "Xem Phim",
+        "nghe_nhac" => "Nghe Nhạc",
+        "fm_radio" => "FM Radio",
+        "xem_tivi" => "Tính Năng Nổi Bật",
+        "ghi_am" => "Tính Năng Nổi Bật",
     ];
-    if(isset($a[$k]))
+    if (isset($a[$k]))
         return $a[$k];
     return "";
 }
 function GiaVND($number)
-{ 
-    return number_format($number,0,",",".")."<sup>đ</sup>";
+{
+    return number_format($number, 0, ",", ".") . "<sup>đ</sup>";
 }
 function GetOptionByGroups($Groups)
-{ 
+{
     $sql = "SELECT * FROM `options` 
     WHERE `groups` ='{$Groups}'";
     $res =  Db()->query($sql);
+    return $res;
+}
+function TaoDonHang($donHang)
+{
+    $iduser = 0;
+
+    $sql = "INSERT INTO `donhang`(`idDH`, `idUser`, `ThoiDiemDatHang`, `TenNguoiNhan`, `DTNguoiNhan`, `DiaChi`, `TongTien`, `idPTTT`, `idPTGH`, `Tax`, `Shipping`, `DaXuLy`, `GhiChu`, `DaTraTien`) VALUES (null,
+     '{$donHang["idUser"]}',
+      '{$donHang["ThoiDiemDatHang"]}',
+      '{$donHang["TenNguoiNhan"]}', 
+      '{$donHang["DTNguoiNhan"]}', 
+      '{$donHang["DiaChi"]}', 
+      '{$donHang["TongTien"]}', 
+      '{$donHang["idPTTT"]}', 
+      '{$donHang["idPTGH"]}', 
+      '{$donHang["Tax"]}', 
+      '{$donHang["Shipping"]}', 
+      '{$donHang["DaXuLy"]}', 
+      '{$donHang["GhiChu"]}', 
+      '{$donHang["DaTraTien"]}' 
+       )";
+    $res =  Db()->query($sql);
+    return DB()->insert_id;;
+}
+function DonHangChiTiet($sanPham)
+{
+    $sql = "INSERT INTO `donhangchitiet`(`idChiTiet`, `idDH`, `idDT`, `TenDT`, `SoLuong`, `Gia`) VALUES (
+       null, 
+       '{$sanPham["idDH"]}', 
+       '{$sanPham["idDT"]}', 
+       '{$sanPham["TenDT"]}', 
+       '{$sanPham["SoLuong"]}', 
+       '{$sanPham["Gia"]}')";
+    $res =  Db()->query($sql);
+
     return $res;
 }
