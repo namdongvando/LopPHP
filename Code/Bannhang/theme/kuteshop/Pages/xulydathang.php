@@ -1,5 +1,4 @@
-<?php
-var_dump($_POST);
+<?php 
 $isNhanhHang = isset($_POST["isNhanHang"]) ? true : false;
 
 $donHang["idUser"] = 0;
@@ -43,6 +42,7 @@ foreach($_SESSION["GioHang"] as $maDT=>$sanPham){
 }
 // cam on ban da dat hang
 // header("/");
-
+?>
+<img src="/public/icon-dat-hang.jpg" alt="">
 
 

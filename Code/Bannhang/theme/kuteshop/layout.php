@@ -20,7 +20,9 @@ include_once("FunctionLayout.php");
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/lib/fancyBox/jquery.fancybox.css" />
-    <link rel="stylesheet" href="./public/kuteshop/style.css">
+    <link rel="stylesheet" href="/public/kuteshop/style.css?v=<?php 
+    echo filectime("public/kuteshop/style.css")
+     ?>">
     <title>www Kute shop</title>
 </head>
 
@@ -50,6 +52,27 @@ include_once("FunctionLayout.php");
     <script type="text/javascript" src="/public/lazyloadimg/lazyloading.js"></script>
     <script type="text/javascript">
         $(function() {
+            $("#GoiY").click(function(){
+                $("#GoiY").html("").hide(); 
+            });
+            $(".input-search input").keyup(function(){
+                var keyword = $(this).val();
+                console.log(keyword.length);
+                console.log(keyword);
+                if(keyword.length >=3){
+                    $.ajax(
+                        {"url":"/ajax.php?pages=goiy&tukhoa="+keyword }
+                        ).done(function(res){
+                
+                            console.log(res);
+                          $("#GoiY").html(res).show();
+
+                    });
+                }
+                
+            });   
+
+
             // lấy tất cả html nào có class là ajaxHtml
             $("#isNhanHang").each(function() {
                 var isCheck = $(this).prop("checked");

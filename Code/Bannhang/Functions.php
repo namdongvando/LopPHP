@@ -453,3 +453,29 @@ function DonHangChiTiet($sanPham)
 
     return $res;
 }
+function TimSanPhamTheoTen($TuKhoa, $loai = 0)
+{
+    if ($loai > 0)
+        $sql = "SELECT * FROM `dienthoai` WHERE 
+    (`TenDT` LIKE '%{$TuKhoa}%' 
+    or `MoTa` LIKE '%{$TuKhoa}%') and `idCL` = '{$loai}' ORDER by `HOT` DESC";
+    else
+        $sql = "SELECT * FROM `dienthoai` WHERE 
+    `TenDT` LIKE '%{$TuKhoa}%' 
+    or `MoTa` LIKE '%{$TuKhoa}%' ORDER by `HOT` DESC";
+
+    $res =  Db()->query($sql);
+    return $res;
+}
+
+function LinkThemGioHang($idDT)
+{
+    return "/index.php?pages=giohang&ThemGioHang={$idDT}";
+}
+ function GetChungLoaiPT()
+{
+    $sql = "SELECT * FROM `chungloai`";
+     $res =  Db()->query($sql);
+
+     return $res;
+}

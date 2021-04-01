@@ -1,5 +1,8 @@
 <?php 
-    
+    if(file_exists("vendor/autoload.php")){
+        include_once("vendor/autoload.php");
+    }
+
     include_once("./ConnectDB.php");
     include_once("./Functions.php");
     
