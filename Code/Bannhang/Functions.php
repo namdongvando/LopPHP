@@ -472,10 +472,37 @@ function LinkThemGioHang($idDT)
 {
     return "/index.php?pages=giohang&ThemGioHang={$idDT}";
 }
- function GetChungLoaiPT()
+function GetChungLoaiPT()
 {
     $sql = "SELECT * FROM `chungloai`";
-     $res =  Db()->query($sql);
+    $res =  Db()->query($sql);
 
-     return $res;
+    return $res;
+}
+function TimUserTheoEmail($email)
+{
+    $sql = "SELECT * FROM `users` WHERE `Email`='{$email}'";
+    $res =  Db()->query($sql);
+    return $res;
+}
+function ThemUser($user)
+{
+    echo $sql = "INSERT INTO `users`(`idUser`, `HoTen`, `Password`, `DiaChi`, `DienThoai`, `Email`, `NgayDangKy`, `idGroup`, `GioiTinh`, `active`, `randomkey`, `TinhThanh`, `QuanHuyen`, `PhuongXa`) 
+    VALUES (
+        null, 
+        '{$user["HoTen"]}', 
+        '{$user["Password"]}', 
+        '{$user["DiaChi"]}', 
+        '{$user["DienThoai"]}', 
+        '{$user["Email"]}', 
+        '{$user["NgayDangKy"]}', 
+        '{$user["idGroup"]}', 
+        '{$user["GioiTinh"]}', 
+        '{$user["active"]}', 
+        '{$user["randomkey"]}', 
+        '{$user["TinhThanh"]}', 
+        '{$user["QuanHuyen"]}', 
+        '{$user["PhuongXa"]}')";
+    $res =  Db()->query($sql);
+    return $res;
 }

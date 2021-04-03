@@ -24,6 +24,7 @@ include_once("FunctionLayout.php");
     echo filectime("public/kuteshop/style.css")
      ?>">
     <title>www Kute shop</title>
+    <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery/jquery-1.11.2.min.js"></script>
 </head>
 
 <body class="<?php echo $_pages == "index" ? 'home' : '' ?>">
@@ -39,7 +40,7 @@ include_once("FunctionLayout.php");
 
     <a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
     <!-- Script-->
-    <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery/jquery-1.11.2.min.js"></script>
+    
     <script type="text/javascript" src="/public/kuteshop/assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/select2/js/select2.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/fancyBox/jquery.fancybox.js"></script>
