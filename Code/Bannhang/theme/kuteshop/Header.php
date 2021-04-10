@@ -1,11 +1,11 @@
 <?php
 $tong = 0;
 $DSLoai = GetChungLoaiPT();
-$_REQUEST["loai"] = 
-isset($_REQUEST["loai"])?$_REQUEST["loai"]:0;
+$_REQUEST["loai"] =
+    isset($_REQUEST["loai"]) ? $_REQUEST["loai"] : 0;
 
-$_REQUEST["keyword"] = 
-isset($_REQUEST["keyword"])?$_REQUEST["keyword"]:"";
+$_REQUEST["keyword"] =
+    isset($_REQUEST["keyword"]) ? $_REQUEST["keyword"] : "";
 ?>
 
 <div id="header" class="header">
@@ -24,20 +24,38 @@ isset($_REQUEST["keyword"])?$_REQUEST["keyword"]:"";
 
             <div id="user-info-top" class="user-info pull-right">
                 <div class="dropdown">
-                    <a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span>Tài Khoản</span></a>
+                    <a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                        <span><?php 
+                        echo isset($_SESSION["KhachHang"])
+                        ?"Xin chào! ". $_SESSION["KhachHang"]["HoTen"]
+                        :'Tài Khoản';
+                         ?></span>
+                    </a>
                     <ul class="dropdown-menu mega_dropdown" role="menu">
-                    <!-- // chua đăng nhap -->
-                        <li><a href="/index.php?pages=dangnhap">Đăng Nhập</a></li>
-                        <li><a href="/index.php?pages=dangky">Đăng Ký</a></li>
-                        <!-- // chua đăng nhap -->
-                        <!-- // da đăng nhap -->
-                        <li><a href="login.html">Thông tin tài khoản</a></li>
-                        <li><a href="#">Yêu Thích</a></li>
-                        <li><a href="#">Theo Dõi</a></li>
-                        <li><a href="#">Đăng Xuất</a></li>
-                        
+                        <?php
+                        if ($_SESSION["KhachHang"]) {
+                        ?>
+                            <!-- // da đăng nhap -->
+                            <li><a href="/index.php?pages=profile">Thông tin tài khoản</a></li>
+                            <li><a href="#">Yêu Thích</a></li>
+                            <li><a href="#">Theo Dõi</a></li>
+                            <li><a href="/index.php?pages=dangxuat">Đăng Xuất</a></li>
 
-                        <!-- // da đăng nhap -->
+
+                            <!-- // da đăng nhap -->
+                        <?php
+                        } else {
+                        ?>
+                            <!-- // chua đăng nhap -->
+                            <li><a href="/index.php?pages=dangnhap">Đăng Nhập</a></li>
+                            <li><a href="/index.php?pages=dangky">Đăng Ký</a></li>
+                            <!-- // chua đăng nhap -->
+                        <?php
+                        }
+
+                        ?>
+
+
 
                     </ul>
                 </div>
@@ -60,7 +78,7 @@ isset($_REQUEST["keyword"])?$_REQUEST["keyword"]:"";
                             <?php
                             while ($loai = $DSLoai->fetch_assoc()) {
                             ?>
-                                <option <?php echo $loai["idCL"] == $_REQUEST["loai"]?'selected':''  ?>  value="<?php echo $loai["idCL"] ?>"><?php echo $loai["TenCL"] ?></option>
+                                <option <?php echo $loai["idCL"] == $_REQUEST["loai"] ? 'selected' : ''  ?> value="<?php echo $loai["idCL"] ?>"><?php echo $loai["TenCL"] ?></option>
                             <?php
                             }
                             ?>
@@ -68,21 +86,21 @@ isset($_REQUEST["keyword"])?$_REQUEST["keyword"]:"";
                     </div>
                     <div class="form-group input-search">
                         <input autocomplete="off" value="<?php echo $_REQUEST["keyword"] ?>" type="text" name="keyword" placeholder="Keyword here...">
-                        <div class="goiY" id="GoiY" >
+                        <div class="goiY" id="GoiY">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                   <a href="">Item 1</a> 
+                                    <a href="">Item 1</a>
                                 </li>
                                 <li class="list-group-item">
-                                   <a href="">Item 1</a> 
+                                    <a href="">Item 1</a>
                                 </li>
                                 <li class="list-group-item">
-                                   <a href="">Item 1</a> 
+                                    <a href="">Item 1</a>
                                 </li>
                                 <li class="list-group-item">
-                                   <a href="">Item 1</a> 
+                                    <a href="">Item 1</a>
                                 </li>
-                                
+
                             </ul>
                         </div>
                     </div>

@@ -2,6 +2,9 @@
 <?php
 include_once("Router.php");
 include_once("FunctionLayout.php");
+$_SESSION["KhachHang"] =
+    isset($_SESSION["KhachHang"]) ?
+    $_SESSION["KhachHang"] : null;
 ?>
 <html>
 
@@ -20,9 +23,9 @@ include_once("FunctionLayout.php");
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="./public/kuteshop/assets/lib/fancyBox/jquery.fancybox.css" />
-    <link rel="stylesheet" href="/public/kuteshop/style.css?v=<?php 
-    echo filectime("public/kuteshop/style.css")
-     ?>">
+    <link rel="stylesheet" href="/public/kuteshop/style.css?v=<?php
+                                                                echo filectime("public/kuteshop/style.css")
+                                                                ?>">
     <title>www Kute shop</title>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/jquery/jquery-1.11.2.min.js"></script>
 </head>
@@ -40,7 +43,7 @@ include_once("FunctionLayout.php");
 
     <a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
     <!-- Script-->
-    
+
     <script type="text/javascript" src="/public/kuteshop/assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/select2/js/select2.min.js"></script>
     <script type="text/javascript" src="/public/kuteshop/assets/lib/fancyBox/jquery.fancybox.js"></script>
@@ -53,25 +56,25 @@ include_once("FunctionLayout.php");
     <script type="text/javascript" src="/public/lazyloadimg/lazyloading.js"></script>
     <script type="text/javascript">
         $(function() {
-            $("#GoiY").click(function(){
-                $("#GoiY").html("").hide(); 
+            $("#GoiY").click(function() {
+                $("#GoiY").html("").hide();
             });
-            $(".input-search input").keyup(function(){
+            $(".input-search input").keyup(function() {
                 var keyword = $(this).val();
                 console.log(keyword.length);
                 console.log(keyword);
-                if(keyword.length >=3){
-                    $.ajax(
-                        {"url":"/ajax.php?pages=goiy&tukhoa="+keyword }
-                        ).done(function(res){
-                
-                            console.log(res);
-                          $("#GoiY").html(res).show();
+                if (keyword.length >= 3) {
+                    $.ajax({
+                        "url": "/ajax.php?pages=goiy&tukhoa=" + keyword
+                    }).done(function(res) {
+
+                        console.log(res);
+                        $("#GoiY").html(res).show();
 
                     });
                 }
-                
-            });   
+
+            });
 
 
             // lấy tất cả html nào có class là ajaxHtml
@@ -132,58 +135,58 @@ include_once("FunctionLayout.php");
 
             });
 
-            $("#FormDatHang").submit(function(){
+            $("#FormDatHang").submit(function() {
                 try {
-                    if($("#TenKhachHang").val()==""){
+                    if ($("#TenKhachHang").val() == "") {
                         $("#TenKhachHang").focus();
                         throw "Bạn Chưa Nhập Tên";
                     }
-                    if($("#DienThoai").val()==""){
+                    if ($("#DienThoai").val() == "") {
                         $("#DienThoai").focus();
                         throw "Bạn Chưa Nhập Số Điện Thoại";
                     }
-                    if($("#TinhThanh").val()==""){
+                    if ($("#TinhThanh").val() == "") {
                         $("#TinhThanh").focus();
                         throw "Bạn Chưa Chọn Tỉnh Thành";
                     }
-                    if($("#QuanHuyen").val()==""){
+                    if ($("#QuanHuyen").val() == "") {
                         $("#QuanHuyen").focus();
                         throw "Bạn Chưa Chọn Quận Huyện";
                     }
-                    if($("#PhuongXa").val()==""){
+                    if ($("#PhuongXa").val() == "") {
                         $("#PhuongXa").focus();
                         throw "Bạn Chưa Chọn Phường Xã";
                     }
-                    if($("#SoNha").val()==""){
+                    if ($("#SoNha").val() == "") {
                         $("#SoNha").focus();
                         throw "Bạn Chưa Nhập Số Nhà";
                     }
                     var isCheck = $("#isNhanHang").prop("checked");
-                    if(isCheck == false){
-                        if($("#HoTen1").val()==""){
-                        $("#HoTen1").focus();
-                        throw "Bạn Chưa Nhập Tên Người Nhận";
-                    }
-                    if($("#DienThoai1").val()==""){
-                        $("#DienThoai1").focus();
-                        throw "Bạn Chưa Nhập Số Điện Thoại Nhận Hàng";
-                    }
-                    if($("#TinhThanh1").val()==""){
-                        $("#TinhThanh1").focus();
-                        throw "Bạn Chưa Chọn Tỉnh Thành";
-                    }
-                    if($("#QuanHuyen1").val()==""){
-                        $("#QuanHuyen1").focus();
-                        throw "Bạn Chưa Chọn Quận Huyện";
-                    }
-                    if($("#PhuongXa1").val()==""){
-                        $("#PhuongXa1").focus();
-                        throw "Bạn Chưa Chọn Phường Xã";
-                    }
-                    if($("#SoNha1").val()==""){
-                        $("#SoNha1").focus();
-                        throw "Bạn Chưa Nhập Số Nhà";
-                    }
+                    if (isCheck == false) {
+                        if ($("#HoTen1").val() == "") {
+                            $("#HoTen1").focus();
+                            throw "Bạn Chưa Nhập Tên Người Nhận";
+                        }
+                        if ($("#DienThoai1").val() == "") {
+                            $("#DienThoai1").focus();
+                            throw "Bạn Chưa Nhập Số Điện Thoại Nhận Hàng";
+                        }
+                        if ($("#TinhThanh1").val() == "") {
+                            $("#TinhThanh1").focus();
+                            throw "Bạn Chưa Chọn Tỉnh Thành";
+                        }
+                        if ($("#QuanHuyen1").val() == "") {
+                            $("#QuanHuyen1").focus();
+                            throw "Bạn Chưa Chọn Quận Huyện";
+                        }
+                        if ($("#PhuongXa1").val() == "") {
+                            $("#PhuongXa1").focus();
+                            throw "Bạn Chưa Chọn Phường Xã";
+                        }
+                        if ($("#SoNha1").val() == "") {
+                            $("#SoNha1").focus();
+                            throw "Bạn Chưa Nhập Số Nhà";
+                        }
                     }
 
                     return true;
@@ -195,7 +198,7 @@ include_once("FunctionLayout.php");
 
         });
     </script>
-    
+
 </body>
 <!-- Mirrored from kutethemes.com/demo/kuteshop/html/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2015 07:15:06 GMT -->
 
