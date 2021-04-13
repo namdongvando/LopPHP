@@ -583,3 +583,25 @@ function GetDonHangByUser($userId)
     WHERE `idUser` = '{$userId}'";
     return Db()->query($sql);
 }
+function GetDonHangChiTiet($MaDonHang,$MaHoa = false)
+{   
+    if($MaHoa == true){
+        $sql = "SELECT * FROM `donhangchitiet` 
+        WHERE sha1(`idDH`) = '{$MaDonHang}'";
+    }else{
+        $sql = "SELECT * FROM `donhangchitiet` 
+        WHERE `idDH` = '{$MaDonHang}'";
+    }
+    return Db()->query($sql); 
+}
+function PostYeuThich($iduser,$idDT)
+{
+    $sql = "INSERT INTO `yeuthich`(`idDT`, `idUser`) 
+    VALUES ('{$idDT}','{$iduser}')";
+    return Db()->query($sql); 
+}
+function GetDienThoaiByIduser($idUser)
+{
+    $sql  ="SELECT * FROM `yeuthich` WHERE `idUser` = '{$idUser}'";
+    return Db()->query($sql); 
+}

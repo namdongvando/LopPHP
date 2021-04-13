@@ -101,6 +101,19 @@ $_SESSION["KhachHang"] =
             });
 
             $("select").select2();
+            $(".btnAjax").click(function(){
+                var data = $(this).data();
+                console.log(data);
+                $.ajax({
+                        method: "GET",
+                        url: data.url,
+                    })
+                    .done(function(msg) {
+                        //console.log(msg);
+                        $(data.id).html(msg);
+                    });
+
+            });
             $(".ajaxHtml").each(function() {
                 var data = $(this).data();
                 console.log(data);

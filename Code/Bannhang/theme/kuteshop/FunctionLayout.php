@@ -118,7 +118,7 @@ function ThemePageTop()
                                                         <img style="height:250px;" class="img-responsive" alt="product" src="./public/images/upload/hinhchinh/<?php echo $row["urlHinh"] ?>" />
                                                     </a>
                                                     <div class="quick-view">
-                                                        <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                        <a title="Add to my wishlist" class="heart" href="/index.php?pages=themyeuthich&mahh=<?php echo $row["idDT"] ?>"></a>
                                                         <a title="Add to compare" class="compare" href="#"></a>
                                                         <a title="Quick view" class="search" href="#"></a>
                                                     </div>

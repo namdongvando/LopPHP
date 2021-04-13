@@ -407,7 +407,7 @@ $discount = (($sanPham["Gia"] - $sanPham["GiaKM"]) / $sanPham["Gia"]) * 100;
                                 <div class="button-group">
                                     <a class="wishlist" href="#"><i class="fa fa-heart-o"></i>
                                         <br>Wishlist</a>
-                                    <a class="compare" href="#"><i class="fa fa-signal"></i>
+                                    <a class="compare" href="/index.php?pages=sosanh&idDT=<?php echo $sanPham["idDT"]; ?>"><i class="fa fa-signal"></i>
                                         <br>
                                         Compare</a>
                                 </div>

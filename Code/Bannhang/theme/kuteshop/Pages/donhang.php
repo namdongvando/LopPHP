@@ -51,10 +51,10 @@ $DSDonHang = GetDonHangByUser($khachHang["idUser"]);
                             <td><?php echo $row["TenNguoiNhan"] ?></td>
                             <td><?php echo $row["DTNguoiNhan"] ?></td>
                             <td><?php echo GiaVND($row["TongTien"]);  ?></td>
-                            <td><button data-url="/ajax.php?pages=dhct&madh=<?php echo $row["idDH"] ?>" class="btn ajaxHtml btn-success" data-id="ChiTietDonHang<?php echo $dem; ?>" >Xem</button></td>
+                            <td><button  data-url="/ajax.php?pages=dhct&madh=<?php echo sha1($row["idDH"]);  ?>" class="btn btnAjax btn-success" data-id="#ChiTietDonHang<?php echo $dem; ?>" >Xem</button></td>
                         </tr>
                         <tr>
-                            <td id="ChiTietDonHang<?php echo $dem; ?>" >
+                            <td colspan="7" id="ChiTietDonHang<?php echo $dem; ?>" >
                             </td>
                         </tr>
                 <?php
