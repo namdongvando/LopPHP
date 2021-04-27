@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^gioi-thieu\.html$ index.php?pages=gioithieu&alias=gioi-thieu [L]
+#"?pages=loai&alias={$alias}&numberrow={$numberrow}&orderby={$orderby}&pagesindex=[i]";
+RewriteRule ^loai\/(.*)-pages-(.*)-(.*)-(.*)\.html$ /index.php?pages=loai&alias=$1&numberrow=$3&orderby=$4&pagesindex=$2 [L]
+# /loai/abc-asda-as-d-asda.html
+RewriteRule ^loai\/(.*)\.html$ /index.php?pages=loai&alias=$1 [L]
+
