@@ -306,109 +306,49 @@
       </aside>
  
       <div class="content-wrapper">
-        11
-
+        
+<ol class="breadcrumb">
+    <li>
+        <a href="/admin.php?pages=loai">Danh Sách Loại</a>
+    </li>
+    <li class="active">Sửa</li>
+</ol>
 
 <div class="panel panel-primary">
-      <div class="panel-heading">
-            <h3 class="panel-title">Danh Sách Loại</h3>
-      </div>
-      <div class="panel-body">
-        <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
-                <th>Email</th>
-                <th>Tình Trạng</th>
-            </tr>
-        </thead>
-        <tbody>
-                        <tr>
-                <th>
-                <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
-                 <a 
-                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
-                 class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
-                </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>admin</th>
-                <th>1312312312312312</th>
-                <th>sdasdaasdas@gmail.com</th>
-                <th>1</th>
-            </tr>                                   
-                        
-
+    <div class="panel-heading">
+        <h3 class="panel-title">Sửa Loại</h3>
+    </div>
+    <div class="panel-body">
+        <form action="" method="POST" enctype="multipart/form-data" role="form">
+            <div class="form-group">
+                <label for="">Tên Loại</label>
+                <input type="hidden" name="MaLoai" value="39">
+                <input value="Samsung" name="TenLoai" type="text" class="form-control" placeholder="Tên Loại">
+            </div>
+            <div class="form-group">
+                <label for="">Chủng Loại</label>
+                <select name="idCL" class="form-control">
+                                            <option   value="1" >Điện thoại di động</option>
+                                            <option   value="2" >Laptop</option>
+                                            <option selected  value="3" >Máy ảnh</option>
                     
-        </tbody>
-    </table>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Hình Ảnh</label>
+                <!-- nếu không có hình 
+                    thì hiện hình no-image.jpg
+                     -->
+                <img style="height:100px;" onerror="this.src='./public/no-image.jpg'" src="/public/loai/39-Home_one_10.gif" class="img-responsive" alt="Image">
+                <!-- cho chọn hình từ máy -->
+                <input name="HinhAnh" type="file" placeholder="Hình Ảnh">
+            </div>
+            <button type="submit" name="save" class="btn btn-primary">Sửa Loại</button>
+            <button type="reset" class="btn btn-primary">Làm Lại</button>
+        </form>
 
-            
-<ul class="pagination">
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-        First
-        </a>
-    </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-            Prev
-        </a>
-    </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-            next
-        </a>
-    </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-            Last
-        </a>
-    </li>
-
-</ul>
-
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
-      </div>
+    </div>
 </div>
-
-
       </div>
       
       <footer class="main-footer">

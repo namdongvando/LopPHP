@@ -6,7 +6,11 @@ date_default_timezone_set("Asia/Ho_Chi_Minh");
 define("vndate", "d-m-Y H:i:s");
 define("dbdate", "Y-m-d H:i:s");
 $_theme = "tintuc";
-
+spl_autoload_register(function ($clasName)
+{
+    $clasName = str_replace("\\","/",$clasName); 
+    include_once($clasName.".php"); 
+});
 ob_start();
 session_start();
 $GLOBALS["db"]  = new mysqli('localhost', 'root', '', 'webbanhang');

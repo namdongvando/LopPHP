@@ -279,7 +279,7 @@
               </a>
               <ul class="treeview-menu">
                 <li class="active"><a href="/admin.php?pages=loaitin"><i class="fa fa-circle-o"></i> Loại Tin</a></li>
-                <li><a href="/admin.php?pages=tintuc"><i class="fa fa-circle-o"></i> Tin Tức</a></li>
+                <li><a href="/admin.php?pages=quanlytin"><i class="fa fa-circle-o"></i> Tin Tức</a></li>
               </ul>
             </li>
             <li class=" treeview">
@@ -334,250 +334,161 @@
                 <th></th>
                 <th>Mã Loại</th>
                 <th>Tên Loại</th>
+                <th>Chủng Loại</th>
                 <th>Hình Ảnh</th>
-                <th>Ghi Chú</th>
+                <th>Ẩn Hiện</th>
             </tr>
         </thead>
         <tbody>
-                        <tr>
+            37            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=37">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=37">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
-                <th>Nokia</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>37</th>
+                <th>Nokiaas dasdasdasd asas asdasdas</th>
+                <th>Laptop</th>
+                <th><img src="/public/loai/37-Home_one_05 - Chủ ĐịnhCopy.gif" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                38            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=38">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=38">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>38</th>
                 <th>LG</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Laptop</th>
+                <th><img src="/public/loai/38-Home_one_05 - Chủ ĐịnhCopy.gif" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                39            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=39">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=39">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>39</th>
                 <th>Samsung</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Máy ảnh</th>
+                <th><img src="/public/loai/39-Home_one_10.gif" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                40            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=40">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=40">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>40</th>
                 <th>Sony Ericsson </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/sony.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                41            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=41">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=41">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>41</th>
                 <th>HTC</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/htc.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                42            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=42">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=42">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>42</th>
                 <th>Motorola </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/motorola.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                43            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=43">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=43">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>43</th>
                 <th>Acer</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/acer.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                44            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=44">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=44">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>44</th>
                 <th>BlackBerry </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/blackberry.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                45            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=45">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=45">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>45</th>
                 <th>Dell</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/dell.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
-                            <tr>
+                46            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>55</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=46">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>59</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=46">Xóa</a>
                 </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>61</b><br />
-</th>
+                <th>46</th>
                 <th>Cayon </th>
-                <th><br />
-<b>Notice</b>:  Undefined index: HinhAnh in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>63</b><br />
-</th>
-                <th><br />
-<b>Notice</b>:  Undefined index: GhiChu in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\loai.php</b> on line <b>64</b><br />
-</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/cayon.jpg" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
                         
 

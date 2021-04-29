@@ -306,46 +306,264 @@
       </aside>
  
       <div class="content-wrapper">
-        11
-
-
-<div class="panel panel-primary">
+        <div class="panel panel-primary">
       <div class="panel-heading">
             <h3 class="panel-title">Danh Sách Loại</h3>
       </div>
       <div class="panel-body">
+      <form action="" method="get" >  
+            <div class="form-inline" >
+                <input type="text" name="keyword" >
+                <input value="loai" type="hidden" name="pages" >
+                <input type="submit" value="Tìm Kiếm" >
+            </div>
+      </form>
+      
+        <select 
+        onchange="window.location.href=
+        '?pages=loai&rowNumber='+this.value" >
+           
+            <option  >10</option>
+            <option  >20</option>
+            <option selected >50</option>
+            <option  >100</option>
+        </select>
         <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
-                <th>Email</th>
-                <th>Tình Trạng</th>
+                <th>Mã Loại</th>
+                <th>Tên Loại</th>
+                <th>Chủng Loại</th>
+                <th>Hình Ảnh</th>
+                <th>Ẩn Hiện</th>
             </tr>
         </thead>
         <tbody>
-                        <tr>
+            37            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=37">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=37">Xóa</a>
                 </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>admin</th>
-                <th>1312312312312312</th>
-                <th>sdasdaasdas@gmail.com</th>
-                <th>1</th>
+                <th>37</th>
+                <th>Nokiaas dasdasdasd asas asdasdas</th>
+                <th>Laptop</th>
+                <th><img src="/public/loai/37-Home_one_05 - Chủ ĐịnhCopy.gif" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                38            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=38">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=38">Xóa</a>
+                </th>
+                <th>38</th>
+                <th>LG</th>
+                <th>Laptop</th>
+                <th><img src="/public/loai/38-Home_one_05 - Chủ ĐịnhCopy.gif" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                39            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=39">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=39">Xóa</a>
+                </th>
+                <th>39</th>
+                <th>Samsung</th>
+                <th>Máy ảnh</th>
+                <th><img src="/public/loai/39-Home_one_10.gif" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                40            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=40">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=40">Xóa</a>
+                </th>
+                <th>40</th>
+                <th>Sony Ericsson </th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/sony.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                41            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=41">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=41">Xóa</a>
+                </th>
+                <th>41</th>
+                <th>HTC</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/htc.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                42            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=42">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=42">Xóa</a>
+                </th>
+                <th>42</th>
+                <th>Motorola </th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/motorola.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                43            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=43">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=43">Xóa</a>
+                </th>
+                <th>43</th>
+                <th>Acer</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/acer.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                44            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=44">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=44">Xóa</a>
+                </th>
+                <th>44</th>
+                <th>BlackBerry </th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/blackberry.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                45            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=45">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=45">Xóa</a>
+                </th>
+                <th>45</th>
+                <th>Dell</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/dell.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                46            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=46">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=46">Xóa</a>
+                </th>
+                <th>46</th>
+                <th>Cayon </th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/cayon.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                47            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=47">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=47">Xóa</a>
+                </th>
+                <th>47</th>
+                <th>Apple</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/apple.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                48            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=48">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=48">Xóa</a>
+                </th>
+                <th>48</th>
+                <th>Vertu</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/vertu.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                49            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=49">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=49">Xóa</a>
+                </th>
+                <th>49</th>
+                <th>Mobell</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/mobell.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                50            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=50">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=50">Xóa</a>
+                </th>
+                <th>50</th>
+                <th>Abc</th>
+                <th>Máy ảnh</th>
+                <th><img src="" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                51            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=51">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=51">Xóa</a>
+                </th>
+                <th>51</th>
+                <th>abc1</th>
+                <th>Điện thoại di động</th>
+                <th><img src="" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
                         
 
@@ -356,55 +574,29 @@
             
 <ul class="pagination">
     <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+        <a href="?pages=loai&pagesNumber=1&rowNumber=50">
         First
         </a>
     </li>
     <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+        <a href="?pages=loai&pagesNumber=1&rowNumber=50">
             Prev
         </a>
     </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
+     <li class='active' ><a href='?pages=loai&pagesNumber=1&rowNumber=50'>1</a></li>   
+    <li class="hidden" >   
+        <a href="?pages=loai&pagesNumber=1&rowNumber=50">
             next
         </a>
     </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
+    <li class="hidden" >
+        <a href="?pages=loai&pagesNumber=1&rowNumber=50">
             Last
         </a>
     </li>
 
 </ul>
 
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
       </div>
 </div>
 

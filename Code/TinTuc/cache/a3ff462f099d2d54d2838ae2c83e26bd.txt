@@ -341,11 +341,11 @@
 ">Xóa</a>
                 </th>
                 <th>1</th>
-                <th>adas</th>
-                <th>admin</th>
-                <th>1312312312312312</th>
-                <th>sdasdaasdas@gmail.com</th>
-                <th>1</th>
+                <th>asdasdas</th>
+                <th>asdasd</th>
+                <th>2342342342</th>
+                <th>asdasdas@gmail.com</th>
+                <th>0</th>
             </tr>                                   
                         
 
@@ -355,19 +355,19 @@
 
             
 <ul class="pagination">
-    <li class="hidden" >
+    <li class="" >
         <a href="?pages=danhsachtaikhoan&pagesNumber=1">
         First
         </a>
     </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+    <li class="" >
+        <a href="?pages=danhsachtaikhoan&pagesNumber=4">
             Prev
         </a>
     </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
+     <li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li><li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=5'>5</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=6'>6</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=7'>7</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=8'>8</a></li>   
     <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
+        <a href="?pages=danhsachtaikhoan&pagesNumber=6">
             next
         </a>
     </li>
@@ -380,20 +380,38 @@
 </ul>
 
         <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
+                            <li >
+                    <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+                    First
+                    </a>
+                </li>
+                <li >
+                    <a href="?pages=danhsachtaikhoan&pagesNumber=4">
+                        Prev
+                    </a>
+                </li>
+                                        <li class="" >
                             <a href="?pages=danhsachtaikhoan&pagesNumber=3">
                                 3                            </a>
                         </li>
+                                             <li class="" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=4">
+                                4                            </a>
+                        </li>
+                                             <li class="active" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=5">
+                                5                            </a>
+                        </li>
+                                             <li class="" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=6">
+                                6                            </a>
+                        </li>
+                                             <li class="" >
+                            <a href="?pages=danhsachtaikhoan&pagesNumber=7">
+                                7                            </a>
+                        </li>
                                  <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
+                <a href="?pages=danhsachtaikhoan&pagesNumber=6">
                     next
                 </a>
             </li>

@@ -306,46 +306,99 @@
       </aside>
  
       <div class="content-wrapper">
-        11
-
-
-<div class="panel panel-primary">
+        <div class="panel panel-primary">
       <div class="panel-heading">
             <h3 class="panel-title">Danh Sách Loại</h3>
       </div>
       <div class="panel-body">
+      <form action="" method="get" >  
+            <div class="form-inline" >
+                <input type="text" name="keyword" >
+                <input value="loai" type="hidden" name="pages" >
+                <input type="submit" value="Tìm Kiếm" >
+            </div>
+      </form>
+      
+        <select 
+        onchange="window.location.href=
+        '?pages=loai&rowNumber='+this.value" >
+           
+            <option selected >10</option>
+            <option  >20</option>
+            <option  >50</option>
+            <option  >100</option>
+        </select>
         <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th></th>
-                <th>#</th>
-                <th>Ho & Tên</th>
-                <th>Tài Khoản</th>
-                <th>SĐT</th>
-                <th>Email</th>
-                <th>Tình Trạng</th>
+                <th>Mã Loại</th>
+                <th>Tên Loại</th>
+                <th>Chủng Loại</th>
+                <th>Hình Ảnh</th>
+                <th>Ẩn Hiện</th>
             </tr>
         </thead>
         <tbody>
-                        <tr>
+            47            <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\danhsachtaikhoan.php</b> on line <b>53</b><br />
-">Sửa</a>
+                 href="?pages=sualoai&id=47">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<br />
-<b>Notice</b>:  Undefined index: MaLoai in <b>C:\Users\NN\Desktop\Share\www\tintuc\Pages\danhsachtaikhoan.php</b> on line <b>57</b><br />
-">Xóa</a>
+                 href="?pages=xoaloai&id=47">Xóa</a>
                 </th>
-                <th>1</th>
-                <th>adas</th>
-                <th>admin</th>
-                <th>1312312312312312</th>
-                <th>sdasdaasdas@gmail.com</th>
-                <th>1</th>
+                <th>47</th>
+                <th>Apple</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/apple.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                48            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=48">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=48">Xóa</a>
+                </th>
+                <th>48</th>
+                <th>Vertu</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/vertu.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                49            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=49">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=49">Xóa</a>
+                </th>
+                <th>49</th>
+                <th>Mobell</th>
+                <th>Điện thoại di động</th>
+                <th><img src="loaisp/mobell.jpg" alt=""> </th>
+                <th>Hiện</th>
+            </tr>                                   
+                50            <tr>
+                <th>
+                <a class="btn btn-primary"
+                 href="?pages=sualoai&id=50">Sửa</a>
+                 <a 
+                 onclick="return confirm('Bạn có muốn xóa loại này không?')" 
+                 class="btn btn-danger"
+                 href="?pages=xoaloai&id=50">Xóa</a>
+                </th>
+                <th>50</th>
+                <th>Abc</th>
+                <th></th>
+                <th><img src="" alt=""> </th>
+                <th>Hiện</th>
             </tr>                                   
                         
 
@@ -355,56 +408,30 @@
 
             
 <ul class="pagination">
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+    <li class="" >
+        <a href="?pages=loai&pagesNumber=1&rowNumber=10">
         First
         </a>
     </li>
-    <li class="hidden" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=1">
+    <li class="" >
+        <a href="?pages=loai&pagesNumber=1&rowNumber=10">
             Prev
         </a>
     </li>
-     <li class='active' ><a href='?pages=danhsachtaikhoan&pagesNumber=1'>1</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=2'>2</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=3'>3</a></li><li class='' ><a href='?pages=danhsachtaikhoan&pagesNumber=4'>4</a></li>   
-    <li class="" >   
-        <a href="?pages=danhsachtaikhoan&pagesNumber=2">
+     <li class='' ><a href='?pages=loai&pagesNumber=1&rowNumber=10'>1</a></li><li class='active' ><a href='?pages=loai&pagesNumber=2&rowNumber=10'>2</a></li>   
+    <li class="hidden" >   
+        <a href="?pages=loai&pagesNumber=2&rowNumber=10">
             next
         </a>
     </li>
-    <li class="" >
-        <a href="?pages=danhsachtaikhoan&pagesNumber=11">
+    <li class="hidden" >
+        <a href="?pages=loai&pagesNumber=2&rowNumber=10">
             Last
         </a>
     </li>
 
 </ul>
 
-        <!-- <ul class="pagination">
-                                    <li class="active" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=1">
-                                1                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                                2                            </a>
-                        </li>
-                                             <li class="" >
-                            <a href="?pages=danhsachtaikhoan&pagesNumber=3">
-                                3                            </a>
-                        </li>
-                                 <li >   
-                <a href="?pages=danhsachtaikhoan&pagesNumber=2">
-                    next
-                </a>
-            </li>
-            <li >
-                <a href="?pages=danhsachtaikhoan&pagesNumber=11">
-                    Last
-                </a>
-            </li>
-                 
-            
-        </ul>              -->
       </div>
 </div>
 

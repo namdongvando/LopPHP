@@ -275,6 +275,15 @@
             </li>
             <li class=" treeview">
               <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Quản Lý Tin Tức</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a href="/admin.php?pages=loaitin"><i class="fa fa-circle-o"></i> Loại Tin</a></li>
+                <li><a href="/admin.php?pages=quanlytin"><i class="fa fa-circle-o"></i> Tin Tức</a></li>
+              </ul>
+            </li>
+            <li class=" treeview">
+              <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Quản Lý NCC</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">

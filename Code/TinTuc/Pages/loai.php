@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use model\Loai;
 
 $name = isset($_REQUEST["keyword"])?$_REQUEST["keyword"]:''; 
 $pagesNumber = isset($_REQUEST["pagesNumber"])?$_REQUEST["pagesNumber"]:1; 
@@ -41,27 +43,31 @@ $res =
                 <th></th>
                 <th>Mã Loại</th>
                 <th>Tên Loại</th>
+                <th>Chủng Loại</th>
                 <th>Hình Ảnh</th>
-                <th>Ghi Chú</th>
+                <th>Ẩn Hiện</th>
             </tr>
         </thead>
         <tbody>
             <?php
             while ($row = $res->fetch_array()) {
+                $loai = new Loai($row);
+                echo $loai->idLoai;
                 ?>
             <tr>
                 <th>
                 <a class="btn btn-primary"
-                 href="?pages=sualoai&id=<?php echo $row["MaLoai"] ?>">Sửa</a>
+                 href="?pages=sualoai&id=<?php echo $loai->idLoai; ?>">Sửa</a>
                  <a 
                  onclick="return confirm('Bạn có muốn xóa loại này không?')" 
                  class="btn btn-danger"
-                 href="?pages=xoaloai&id=<?php echo $row["MaLoai"] ?>">Xóa</a>
+                 href="?pages=xoaloai&id=<?php echo $loai->idLoai; ?>">Xóa</a>
                 </th>
-                <th><?php echo $row["MaLoai"]; ?></th>
-                <th><?php echo $row["TenLoai"]; ?></th>
-                <th><?php echo $row["HinhAnh"]; ?></th>
-                <th><?php echo $row["GhiChu"]; ?></th>
+                <th><?php echo $loai->idLoai; ?></th>
+                <th><?php echo $loai->TenLoai ?></th>
+                <th><?php echo $loai->ChungLoai()->TenCL; ?></th>
+                <th><img src="<?php echo $loai->hinh() ?>" alt=""> </th>
+                <th><?php echo $loai->AnHien() ?></th>
             </tr>                                   
                 <?php              
             }

@@ -1,7 +1,7 @@
 <?php  
 namespace model;
 
-class Tin extends DB  implements ITin
+class Tin extends DB 
 {
 
     public 
@@ -15,12 +15,13 @@ class Tin extends DB  implements ITin
     $idLT, 
     $AnHien, 
     $TinHot;
+    const tableName = "tin";
     /**
      * Class constructor.
      */
     function __construct($tin =null)
     {
-        parent::__construct();
+        parent::__construct(self::tableName);
         if($tin){
             $this->idTin=!empty($tin["idTin"])?$tin["idTin"]:null;
             $this->TieuDe=!empty($tin["TieuDe"])?$tin["TieuDe"]:null;
@@ -37,17 +38,19 @@ class Tin extends DB  implements ITin
     }
  
     public function Post($Model){
-        $this->InsetModel("tin",$Model);
+        $this->InsetModel($Model);
     }
     public function Put($Model){
         $where = "`idTin` = {$Model["idTin"]}";
-        $this->UpdateModel("tin",$Model,$where);
+        $this->UpdateModel($Model,$where);
     }
     public function Delete($id){
-
+        $where = "`idTin` = '{$id}'";
+        $this->DeleteDataTable($where);
     }
     public function GetById($id){
-
+        $where = "`idTin` = '{$id}'";
+        
     }
 
 }

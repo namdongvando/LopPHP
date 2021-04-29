@@ -1,11 +1,5 @@
 <?php 
-spl_autoload_register(function ($clasName)
-{
-    $clasName = str_replace("\\","/",$clasName);
-    
-    include_once($clasName.".php");
-    
-});
+
     if(file_exists("vendor/autoload.php")){
         include_once("vendor/autoload.php");
     }
